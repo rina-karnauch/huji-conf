@@ -5,7 +5,7 @@
     width:100%;
 
     background-color: #85bfd0;
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 1px solid #6c99a7;
 
     font-family: 'Bebas Neue', cursive;
     font-size:40px;
@@ -31,15 +31,42 @@
 .title-text{
     display:inline-block;
     position:relative;
-    left:9px;
-    top:3px;
+    left:15px;
+    top:7px;
 }
 
 .lock-icon{
+    font-size:30px;
     display:inline-block;
     position:relative;
     left:7px;
     top:7px;
 }
+
+.side-icons{
+    font-size:28px;
+    display:inline-block;
+    position:relative;
+    top:14px;
+    right:15px;
+    float:right;
+}
+
+.night-mode:hover{
+    background-color: #e65525;
+    border-radius:50%;
+    box-shadow: 0 0 0 3px #e78267;
+}
+
+.facebook-link:hover{
+    background-color: #e65525;
+    border-radius:50%;
+    box-shadow: 0 0 0 3px #e78267;
+}
+
+span.space{
+    margin:5px;
+}
+
 
 
