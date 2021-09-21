@@ -1,20 +1,13 @@
 import './MainContent.css';
+
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Upnav from "./Upnav";
 import Table from "./Table";
+
 import {Grid} from "@mui/material";
 import * as React from "react";
-import {styled} from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
 import Footer from "./Footer";
-
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
 
 const MainContent = () => {
     return (
