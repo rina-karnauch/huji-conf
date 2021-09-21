@@ -1,8 +1,10 @@
 import './ConfessionsTable.css';
-import {Grid} from "@mui/material";
 import * as React from 'react';
+
+import {Grid} from "@mui/material";
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -15,17 +17,17 @@ const ConfessionsTable = () => {
     return (
         <div className="confessions">
             <Grid container spacing={2}>
-                <Grid item xs={2}>
-                    <Item>emoji</Item>
-                </Grid>
-                <Grid item xs={10}>
-                    <Item>send confession</Item>
+                <Grid item xs={12}>
+                    <div className="confession-box-title">
+                        <EmailTwoToneIcon/>
+                        <p className="title">Send a Confession</p>
+                    </div>
                 </Grid>
                 <Grid item xs={12}>
                     <Item>type confession...
-                        <br></br>
-                        <br></br>
-                        <br></br>
+                        <br/>
+                        <br/>
+                        <br/>
                         <br></br>
                     </Item>
                 </Grid>
