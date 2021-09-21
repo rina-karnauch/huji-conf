@@ -78,6 +78,10 @@ span.space{
     .side-icons {
         display:none;
     }
+
+    .title-text{
+        word-break: keep-all;
+    }
 }
 
 

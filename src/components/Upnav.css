@@ -1,0 +1,12 @@
+
+.up-nav{
+    border-bottom:1px solid #dbdbdb;
+    background-color: #f5f5f5;
+}
+
+
+@media (min-width:600px){
+    .up-nav{
+        display:none;
+    }
+}

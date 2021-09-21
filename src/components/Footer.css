@@ -1,4 +1,32 @@
 
 .footer-main{
+    background-color: #efefef;
+    border-top:1px solid #dbdbdb;
+
+    position:absolute;
+    bottom:0;
+
     padding:10px;
+    text-align: center;
+
+}
+
+.huji-text{
+    color: #8d8d8d;
+    font-size:14px;
+}
+
+.admin-text{
+    color: #acacac;
+    font-size:12px;
+}
+
+.rights-text{
+    color: #8d8d8d;
+    font-size:15px;
+}
+
+.huji-text a{
+    color: #6896b4;
+    font-weight: 700;
 }

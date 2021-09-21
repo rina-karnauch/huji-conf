@@ -2,6 +2,8 @@ import './Header.css';
 import {FcLock} from 'react-icons/fc';
 import {GiNightSky} from 'react-icons/gi';
 import {FaFacebook} from 'react-icons/fa'
+import Upnav from "./Upnav";
+import * as React from "react";
 
 
 const Header = () => {

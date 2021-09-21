@@ -1,11 +1,13 @@
 import './MainContent.css';
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Upnav from "./Upnav";
 import Table from "./Table";
 import {Grid} from "@mui/material";
 import * as React from "react";
 import {styled} from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import Footer from "./Footer";
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -16,9 +18,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const MainContent = () => {
     return (
-
         <div>
             <Header/>
+            <Upnav/>
             <Grid container spacing={2}>
                 <Grid item sm={3} className="sidebar-grid">
                     <Sidebar/>
@@ -27,6 +29,7 @@ const MainContent = () => {
                     <Table/>
                 </Grid>
             </Grid>
+            <Footer/>
         </div>
     );
 }
