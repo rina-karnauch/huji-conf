@@ -1,13 +1,13 @@
 import "./NumberSwitch.css"
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import Grid from "@mui/material/Grid";
 import Switch from "@mui/material/Switch";
 import {alpha, styled} from '@mui/material/styles';
 import {CssTextField} from "./ConfessionTextField";
 
-const label = { inputProps: { 'aria-label': 'confession number switch'  } };
+const label = {inputProps: {'aria-label': 'confession number switch'}};
 
-const CostumedSwitch = styled(Switch)(({ theme }) => ({
+const CostumedSwitch = styled(Switch)(({theme}) => ({
     "& .MuiSwitch-switchBase.Mui-checked": {
         color: "#84bcd4",
         "&:hover": {
@@ -19,16 +19,16 @@ const CostumedSwitch = styled(Switch)(({ theme }) => ({
     }
 }));
 
-const handleChange = (event) => {
-    console.log("5");
-};
+const NumberSwitch = (props) => {
 
-const NumberSwitch = () => {
-
-    const [disabled, setDisabled] = useState(false);
+    const [disabled, setDisabled] = useState(true);
+    const [text, setText] = useState('');
 
     function handleConfessionNumberBox() {
         setDisabled(!disabled);
+        if (!disabled) {
+            setText("");
+        }
     }
 
     return (
@@ -44,7 +44,15 @@ const NumberSwitch = () => {
                           label="* number"
                           variant="outlined"
                           className="text-field"
-                          disabled={disabled}/>
+                          disabled={disabled}
+                          onChange={(event) => {
+                              props.onCommentToExistingConfession(event.target.value);
+                              if(!disabled){
+                                  setText(event.target.value)
+                              }
+                          }}
+                          value={text}
+            />
         </Grid>
     );
 }
