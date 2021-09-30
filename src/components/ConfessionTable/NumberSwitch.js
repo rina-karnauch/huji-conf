@@ -1,15 +1,11 @@
 import "./NumberSwitch.css"
-import * as React from "react";
-import {useState} from "react";
-
-import { alpha, styled } from '@mui/material/styles';
-
+import React, {useState} from 'react';
 import Grid from "@mui/material/Grid";
 import Switch from "@mui/material/Switch";
-
+import {alpha, styled} from '@mui/material/styles';
 import {CssTextField} from "./ConfessionTextField";
 
-const label = "is this a comment for an existing confession?";
+const label = { inputProps: { 'aria-label': 'confession number switch'  } };
 
 const CostumedSwitch = styled(Switch)(({ theme }) => ({
     "& .MuiSwitch-switchBase.Mui-checked": {
@@ -29,7 +25,11 @@ const handleChange = (event) => {
 
 const NumberSwitch = () => {
 
-    const [disabled, setDisabled] = useState("");
+    const [disabled, setDisabled] = useState(false);
+
+    function handleConfessionNumberBox() {
+        setDisabled(!disabled);
+    }
 
     return (
         <Grid container
@@ -39,12 +39,12 @@ const NumberSwitch = () => {
         >
             <p className="switch-text">comment for an existing confession?</p>
             <CostumedSwitch {...label}
-                            onChange={handleChange}/>
+                            onChange={handleConfessionNumberBox}/>
             <CssTextField id="outlined-basic"
                           label="* number"
                           variant="outlined"
                           className="text-field"
-                          disabled="disabled"/>
+                          disabled={disabled}/>
         </Grid>
     );
 }
