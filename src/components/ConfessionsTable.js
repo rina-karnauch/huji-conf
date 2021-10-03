@@ -1,27 +1,28 @@
 import './ConfessionsTable.css';
 import * as React from 'react';
-
+import Button from '@mui/material/Button';
+import {Grid} from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
+import {styled} from '@mui/material/styles';
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 import ConfessionTextField from "./ConfessionTable/ConfessionTextField"
-
-import {Grid} from "@mui/material";
 import NumberSwitch from "./ConfessionTable/NumberSwitch";
-import {useState} from "react";
+import {useState, useRef} from "react";
 
+const ColorButton = styled(Button)(({theme}) => ({
+    color: theme.palette.getContrastText("#4a5465"),
+    backgroundColor: "#4a5465",
+    '&:hover': {
+        backgroundColor: "#85bfd0",
+    },
+}));
 
-
-// // item styling
-// const Item = styled(Paper)(({ theme }) => ({
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-// }));
-
-const ConfessionsTable = () => {
+const ConfessionsTable = (ref) => {
 
     const [confession, setConfession] = useState('');
     const [ID, setID] = useState('');
+    const numberSwitchRef = useRef();
+    const confessionTextRef = useRef();
 
     const onSaveConfessionText = (data) => {
         setConfession(data);
@@ -31,34 +32,41 @@ const ConfessionsTable = () => {
         setID(data);
     }
 
-    const printConfession = () => {
-        console.log("Confession Text:" + confession);
-    }
+    const onSubmission = () => {
 
-    const printID = () => {
-        console.log("ID:" + ID);
-    }
+        let confessionJSON = {
+            confessions: confession,
+            isComment: (ID !== ''),
+            ID: ID
+        }
 
-    const onButtonClick =() =>{
-        printConfession();
-        if(ID){
-            printID();
-        }
-        else{
-            console.log("not a comment");
-        }
+        fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
+            method: 'POST',
+            body: JSON.stringify(confessionJSON),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        // clearing data
+        numberSwitchRef.current.clear();
+        confessionTextRef.current.clear();
+
     }
 
     return (
         <div className="confessions">
             <Grid container spacing={2}>
                 <ConfessionTableTitle/>
-                <ConfessionTextField onSaveConfessionText={onSaveConfessionText}/>
-                <NumberSwitch onCommentToExistingConfession={onCommentToExistingConfession}/>
+                <ConfessionTextField onSaveConfessionText={onSaveConfessionText} ref={confessionTextRef}/>
+                <NumberSwitch onCommentToExistingConfession={onCommentToExistingConfession} ref={numberSwitchRef}/>
                 <Grid item xs={12}>
-                    <button onClick={onButtonClick}>
+                    <ColorButton variant="contained" fullWidth
+                                 onClick={onSubmission}
+                                 endIcon={<SendIcon/>}
+                    >
                         submit
-                    </button>
+                    </ColorButton>
                 </Grid>
             </Grid>
         </div>

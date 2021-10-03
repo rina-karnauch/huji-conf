@@ -1,9 +1,9 @@
 import "./NumberSwitch.css"
-import React, {useState, useRef} from 'react';
+import React, {forwardRef, useState, useImperativeHandle} from 'react';
 import Grid from "@mui/material/Grid";
-import Switch from "@mui/material/Switch";
-import {alpha, styled} from '@mui/material/styles';
 import {CssTextField} from "./ConfessionTextField";
+import {alpha, styled} from '@mui/material/styles';
+import Switch from "@mui/material/Switch";
 
 const label = {inputProps: {'aria-label': 'confession number switch'}};
 
@@ -18,18 +18,26 @@ const CostumedSwitch = styled(Switch)(({theme}) => ({
         backgroundColor: "#84bcd4"
     }
 }));
-
-const NumberSwitch = (props) => {
+const NumberSwitch = forwardRef((props, ref) => {
 
     const [disabled, setDisabled] = useState(true);
     const [text, setText] = useState('');
 
     function handleConfessionNumberBox() {
         setDisabled(!disabled);
-        if (!disabled) {
-            setText("");
-        }
     }
+
+    useImperativeHandle(ref, () => ({
+        clear: () => {
+            setText("");
+            if (disabled) {
+                setDisabled(true);
+            } else {
+                setDisabled(false);
+            }
+            console.log("cleared number!");
+        }
+    }));
 
     return (
         <Grid container
@@ -44,17 +52,18 @@ const NumberSwitch = (props) => {
                           label="* number"
                           variant="outlined"
                           className="text-field"
+                          type="number"
                           disabled={disabled}
                           onChange={(event) => {
-                              props.onCommentToExistingConfession(event.target.value);
-                              if(!disabled){
-                                  setText(event.target.value)
+                              if (!disabled) {
+                                  setText(event.target.value);
                               }
+                              props.onCommentToExistingConfession(event.target.value);
                           }}
                           value={text}
             />
         </Grid>
     );
-}
+});
 
 export default NumberSwitch;

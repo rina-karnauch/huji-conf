@@ -2,7 +2,7 @@ import * as React from "react";
 import {Grid} from "@mui/material";
 import {styled} from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
-import {useState} from "react";
+import {forwardRef, useImperativeHandle, useState} from "react";
 
 // styling of text box
 export const CssTextField = styled(TextField)({
@@ -25,9 +25,16 @@ export const CssTextField = styled(TextField)({
     },
 });
 
-const ConfessionTextField = (props) => {
+const ConfessionTextField = forwardRef((props, ref) => {
 
     const [confession, setConfession] = useState('');
+
+    useImperativeHandle(ref, () => ({
+        clear: () => {
+            setConfession("");
+            console.log("cleared confession!");
+        }
+    }));
 
     return (
         <Grid item xs={12}>
@@ -37,6 +44,7 @@ const ConfessionTextField = (props) => {
                           label="write what's on your mind"
                           variant="outlined"
                           value={confession}
+                          name="entry.638196057"
                           onChange={(event) => {
                               setConfession(event.target.value)
                               props.onSaveConfessionText(event.target.value)
@@ -44,6 +52,6 @@ const ConfessionTextField = (props) => {
             />
         </Grid>
     );
-}
+});
 
 export default ConfessionTextField;
