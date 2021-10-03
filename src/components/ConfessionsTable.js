@@ -51,6 +51,8 @@ const ConfessionsTable = (ref) => {
         // clearing data
         numberSwitchRef.current.clear();
         confessionTextRef.current.clear();
+        setID('');
+        setConfession('');
 
     }
 

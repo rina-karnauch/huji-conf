@@ -29,6 +29,7 @@ const ConfessionTextField = forwardRef((props, ref) => {
 
     const [confession, setConfession] = useState('');
 
+    // child function so parent could use it.
     useImperativeHandle(ref, () => ({
         clear: () => {
             setConfession("");

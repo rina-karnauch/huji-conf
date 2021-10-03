@@ -23,10 +23,12 @@ const NumberSwitch = forwardRef((props, ref) => {
     const [disabled, setDisabled] = useState(true);
     const [text, setText] = useState('');
 
-    function handleConfessionNumberBox() {
+    function handleConfessionNumberBox(event) {
         setDisabled(!disabled);
+        onChangeOfTextBox(event);
     }
 
+    // child function so parent could use it.
     useImperativeHandle(ref, () => ({
         clear: () => {
             setText("");
@@ -35,9 +37,17 @@ const NumberSwitch = forwardRef((props, ref) => {
             } else {
                 setDisabled(false);
             }
-            console.log("cleared number!");
         }
     }));
+
+    function onChangeOfTextBox(event) {
+        if (!disabled) {
+            setText(event.target.value);
+        } else {
+            setText('');
+        }
+        props.onCommentToExistingConfession(event.target.value);
+    }
 
     return (
         <Grid container
@@ -47,19 +57,14 @@ const NumberSwitch = forwardRef((props, ref) => {
         >
             <p className="switch-text">comment for an existing confession?</p>
             <CostumedSwitch {...label}
-                            onChange={handleConfessionNumberBox}/>
+                            onChange={(event) => handleConfessionNumberBox(event)}/>
             <CssTextField id="outlined-basic"
                           label="* number"
                           variant="outlined"
                           className="text-field"
                           type="number"
                           disabled={disabled}
-                          onChange={(event) => {
-                              if (!disabled) {
-                                  setText(event.target.value);
-                              }
-                              props.onCommentToExistingConfession(event.target.value);
-                          }}
+                          onChange={(event) => onChangeOfTextBox(event)}
                           value={text}
             />
         </Grid>
