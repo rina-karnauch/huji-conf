@@ -61,13 +61,13 @@ const ConfessionsTable = () => {
             });
 
         // into firebase
-        // fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
-        //     method: 'POST',
-        //     body: JSON.stringify(confessionJSON.confessions),
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // });
+        fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
+            method: 'POST',
+            body: JSON.stringify(confessionJSON.confessions),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
 
         // clearing data
         numberSwitchRef.current.clear();
@@ -78,7 +78,7 @@ const ConfessionsTable = () => {
     }
 
     return (
-        <div className="confessions">
+        <div className="content-table">
             <Grid container spacing={2}>
                 <ConfessionTableTitle/>
                 <ConfessionTextField onSaveConfessionText={onSaveConfessionText} ref={confessionTextRef}/>

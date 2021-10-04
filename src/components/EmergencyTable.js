@@ -3,8 +3,8 @@ import * as React from "react";
 
 const EmergencyTable = () => {
     return (
-        <div>
-            hello
+        <div className="content-table">
+
         </div>
     );
 }
