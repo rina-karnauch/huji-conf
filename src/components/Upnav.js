@@ -16,18 +16,18 @@ const Upnav = () => {
                 }}
                 items={[
                     {
-                        title: 'home',
-                        itemId: '/confess',
+                        title: 'write a confessions',
+                        itemId: '/',
                         // you can use your own custom Icon component as well
                         // icon is optional
-                        elemBefore: () => <AiTwotoneFileText name="home" />,
+                        elemBefore: () => <AiTwotoneFileText name="home"/>,
                     },
                     {
-                        title: 'hotlines',
+                        title: 'reach hotlines',
                         itemId: '/hotlines',
                         // you can use your own custom Icon component as well
                         // icon is optional
-                        elemBefore: () => <HiPhone name="hotlines" />,
+                        elemBefore: () => <HiPhone name="hotlines"/>,
                     },
                 ]}
             />

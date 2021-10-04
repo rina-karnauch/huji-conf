@@ -1,34 +1,37 @@
 import './Sidebar.css';
-
-import {Navigation} from 'react-minimal-side-navigation';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
+import {Navigation} from 'react-minimal-side-navigation';
 import {AiTwotoneFileText} from 'react-icons/ai';
 import {HiPhone} from 'react-icons/hi';
+import {useHistory} from "react-router-dom";
 
 
-const Sidebar = () => {
+function Sidebar() {
+
+    const history = useHistory();
+
     return (
         <div className="side-bar">
             <Navigation
                 // you can use your own router's api to get pathname
                 activeItemId="/management/members"
                 onSelect={({itemId}) => {
-                    // maybe push to the route
+                    history.push(itemId);
                 }}
                 items={[
                     {
-                        title: 'home',
-                        itemId: '/confess',
+                        title: 'write a confession',
+                        itemId: '/',
                         // you can use your own custom Icon component as well
                         // icon is optional
-                        elemBefore: () => <AiTwotoneFileText name="home" />,
+                        elemBefore: () => <AiTwotoneFileText name="home" fontSize="24px"/>,
                     },
                     {
-                        title: 'hotlines',
+                        title: 'reach hotlines',
                         itemId: '/hotlines',
                         // you can use your own custom Icon component as well
                         // icon is optional
-                        elemBefore: () => <HiPhone name="hotlines" />,
+                        elemBefore: () => <HiPhone name="hotlines" fontSize="24px"/>,
                     },
                 ]}
             />
