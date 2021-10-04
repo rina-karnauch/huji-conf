@@ -1,19 +1,16 @@
 import ConfessionsTable from "./ConfessionsTable";
 import './Table.css';
-import {Route} from "react-router-dom";
+import {Router, Route, Switch} from "react-router-dom";
 import EmergencyTable from "./EmergencyTable";
 import * as React from "react";
-import Footer from "./Footer";
 
 const Table = () => {
     return (
         <div className="main-table">
-            <Route exact path="/">
-                <ConfessionsTable/>
-            </Route>
-            <Route exact path="/hotlines">
-                <EmergencyTable/>
-            </Route>
+            <Switch>
+                <Route exact path="/" component={ConfessionsTable}/>
+                <Route exact path="/hotlines" component={EmergencyTable}/>
+            </Switch>
         </div>
     );
 }
