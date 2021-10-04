@@ -17,7 +17,7 @@ const ColorButton = styled(Button)(({theme}) => ({
     },
 }));
 
-const ConfessionsTable = (ref) => {
+const ConfessionsTable = () => {
 
     const [confession, setConfession] = useState('');
     const [ID, setID] = useState('');
@@ -32,21 +32,42 @@ const ConfessionsTable = (ref) => {
         setID(data);
     }
 
+    const constructFormData = (confessionJSON) => {
+        let formData = new FormData();
+        let text = confessionJSON.text;
+        if (confessionJSON.isComment) {
+            text = "בתגובה ל" + confessionJSON.ID + ": " + text
+        }
+        formData.append('entry.638196057', text);
+        return formData;
+    }
+
     const onSubmission = () => {
 
         let confessionJSON = {
-            confessions: confession,
+            text: confession,
             isComment: (ID !== ''),
             ID: ID
         }
 
-        fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
-            method: 'POST',
-            body: JSON.stringify(confessionJSON),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        let formData = constructFormData(confessionJSON);
+
+        // into google forms
+        fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_Fn2K-cqZophaEL4dW8ZRIcHbfok2dhsLjojCP1H5ekTulQ/formResponse",
+            {
+                body: formData,
+                method: 'post',
+                mode: 'no-cors'
+            });
+
+        // into firebase
+        // fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
+        //     method: 'POST',
+        //     body: JSON.stringify(confessionJSON.confessions),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // });
 
         // clearing data
         numberSwitchRef.current.clear();

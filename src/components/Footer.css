@@ -2,6 +2,7 @@
 .footer-main{
     background-color: #efefef;
     border-top:1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
 
     position:absolute;
     bottom:0;
