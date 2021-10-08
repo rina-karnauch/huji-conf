@@ -1,24 +1,12 @@
 
 .list-item-title{
-    margin: 10px 10px 10px 30px;
+    margin: 10px 10px 10px 10px;
 }
 
 .emergency-link a{
     margin:5px;
     color: #7f7f7f;
     text-decoration: none;
-}
-
-.emergency-link a.arcci-men:hover{
-    transition: 0.3s;
-    color: #537faf;
-    border-bottom: 3px solid #537faf;
-}
-
-.emergency-link a.arcci-women:hover{
-    transition: 0.3s;
-    color: #e04899;
-    border-bottom: 3px solid #e04899;
 }
 
 
