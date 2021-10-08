@@ -8,10 +8,7 @@ const Table = () => {
     return (
         <div className="main-table">
             <Switch>
-                <Route exact path="/">
-                    <Redirect to="/home" component={ConfessionsTable}/>
-                </Route>
-                <Route exact path="/home" component={ConfessionsTable}/>
+                <Route exact path="/" component={ConfessionsTable}/>
                 <Route exact path="/hotlines" component={EmergencyTable}/>
             </Switch>
         </div>
