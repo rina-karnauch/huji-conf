@@ -8,6 +8,7 @@ import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 import ConfessionTextField from "./ConfessionTable/ConfessionTextField"
 import NumberSwitch from "./ConfessionTable/NumberSwitch";
 import {useState, useRef} from "react";
+import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 
 const ColorButton = styled(Button)(({theme}) => ({
     color: theme.palette.getContrastText("#4a5465"),
@@ -80,7 +81,7 @@ const ConfessionsTable = () => {
     return (
         <div className="content-table">
             <Grid container spacing={2}>
-                <ConfessionTableTitle/>
+                <ConfessionTableTitle title="Send a Confession" icon={<EmailTwoToneIcon/>}/>
                 <ConfessionTextField onSaveConfessionText={onSaveConfessionText} ref={confessionTextRef}/>
                 <NumberSwitch onCommentToExistingConfession={onCommentToExistingConfession} ref={numberSwitchRef}/>
                 <Grid item xs={12}>

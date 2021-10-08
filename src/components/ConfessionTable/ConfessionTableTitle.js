@@ -2,12 +2,13 @@ import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import {Grid} from "@mui/material";
 import * as React from "react";
 
-const ConfessionTableTitle = () => {
+const ConfessionTableTitle = (props) => {
+    //title: Send a Confession
     return (
         <Grid item xs={12}>
             <div className="confession-box-title">
-                <EmailTwoToneIcon/>
-                <p className="title">Send a Confession</p>
+                {props.icon}
+                <p className="title">{props.title}</p>
             </div>
         </Grid>
     );
