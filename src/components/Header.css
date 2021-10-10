@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root{
+    --header-bg:#85bfd0;
+    --header-border:#6c99a7;
+}
 .header-line{
     height:55px;
     width:100%;
 
-    background-color: #85bfd0;
-    border-bottom: 1px solid #6c99a7;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
 
     font-family: 'Bebas Neue', cursive;
     font-size:40px;

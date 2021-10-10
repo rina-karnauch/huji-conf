@@ -3,25 +3,39 @@ import {Grid} from "@mui/material";
 import {styled} from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import {forwardRef, useImperativeHandle, useState} from "react";
+import {textBoxBorder} from "../Header";
 
 // styling of text box
 export const CssTextField = styled(TextField)({
+
+    '& label': {
+        color:textBoxBorder,
+    },
     '& label.Mui-focused': {
-        color: '#4a5465',
+        color: textBoxBorder,
+    },
+    '& label.Mui-disabled': {
+        color: textBoxBorder,
+    },
+    '& .MuiInputBase-root': {
+        color:textBoxBorder,
     },
     '& .MuiInput-underline:after': {
-        borderBottomColor: '#dbdbdb',
+        borderBottomColor: textBoxBorder,
     },
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
-            borderColor: '#dbdbdb',
+            borderColor: textBoxBorder,
         },
         '&:hover fieldset': {
-            borderColor: '#dbdbdb',
+            borderColor: textBoxBorder,
         },
         '&.Mui-focused fieldset': {
-            borderColor: '#4a5465',
+            borderColor: textBoxBorder,
         },
+        '&.Mui-disabled fieldset': {
+            borderColor: textBoxBorder,
+        }
     },
 });
 
@@ -36,6 +50,8 @@ const ConfessionTextField = forwardRef((props, ref) => {
             console.log("cleared confession!");
         }
     }));
+    console.log("color2:" + textBoxBorder);
+
 
     return (
         <Grid item xs={12}>

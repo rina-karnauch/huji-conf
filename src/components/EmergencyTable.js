@@ -12,10 +12,10 @@ import IconButton from '@mui/material/IconButton';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
-import {pink} from '@mui/material/colors';
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle";
 import ListItemText from '@mui/material/ListItemText';
 
+// const grey
 
 const EmergencyTable = () => {
     return (
@@ -41,7 +41,8 @@ const EmergencyTable = () => {
                                     }}/>
                                 Phone
                             </a>
-                            <a href="https://www.eran.org.il/">
+                            <a href="https://www.eran.org.il/"
+                               target="_blank">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -64,7 +65,8 @@ const EmergencyTable = () => {
                     primary="Sahar: on-line assistance for emotional distress"
                     secondary=
                         {<span className="emergency-link">
-                            <a href="https://sahar.org.il/">
+                            <a href="https://sahar.org.il/"
+                               target="_blank">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -91,18 +93,19 @@ const EmergencyTable = () => {
                                 <MaleRoundedIcon
                                     sx={{
                                         fontSize: 15,
-                                        color:"#537faf",
+                                        color: "#537faf",
                                     }}/> Phone
                             </a>
                             <a href="tel:*1202">
                                 <FemaleRoundedIcon
                                     sx={{
                                         fontSize: 15,
-                                        color:"#e04899",
+                                        color: "#e04899",
                                     }}
                                 /> Phone
                             </a>
-                            <a href="https://www.1202.org.il/">
+                            <a href="https://www.1202.org.il/"
+                               target="_blank">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -128,20 +131,21 @@ const EmergencyTable = () => {
                         {<span className="emergency-link">
                             <a href="psyserv@mail.huji.ac.il">
                                 <EmailRoundedIcon
-                                sx={{
-                                    fontSize: 12,
-                                    marginRight: 0.5
-                                }}/>
+                                    sx={{
+                                        fontSize: 12,
+                                        marginRight: 0.5
+                                    }}/>
                                 Email
                             </a>
                             <a href="tel:02-5880429">
                                 <LocalPhoneRoundedIcon
-                                sx={{
-                                    fontSize: 12,
-                                    marginRight: 0.5
-                                }}/> Phone
+                                    sx={{
+                                        fontSize: 12,
+                                        marginRight: 0.5
+                                    }}/> Phone
                             </a>
-                            <a href="https://studean.huji.ac.il/book/%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A1%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%92%D7%99">
+                            <a href="https://studean.huji.ac.il/book/%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A1%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%92%D7%99"
+                               target="_blank">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -164,7 +168,8 @@ const EmergencyTable = () => {
                     primary="HUJI's Equal Opportunities"
                     secondary=
                         {<span className="emergency-link">
-                            <a href="https://studean.huji.ac.il/%D7%A9%D7%99%D7%95%D7%95%D7%99%D7%95%D7%9F-%D7%94%D7%96%D7%93%D7%9E%D7%A0%D7%95%D7%99%D7%95%D7%AA">
+                            <a href="https://studean.huji.ac.il/%D7%A9%D7%99%D7%95%D7%95%D7%99%D7%95%D7%9F-%D7%94%D7%96%D7%93%D7%9E%D7%A0%D7%95%D7%99%D7%95%D7%AA"
+                               target="_blank">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -187,7 +192,8 @@ const EmergencyTable = () => {
                     primary="HUJI's Dean Of Students"
                     secondary=
                         {<span className="emergency-link">
-                            <a href="https://sf_prod_bg.formtitan.com/ftbe37b9791569231113071#/">
+                            <a href="https://sf_prod_bg.formtitan.com/ftbe37b9791569231113071#/"
+                               target="_blank">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -218,7 +224,8 @@ const EmergencyTable = () => {
                                               }}/>
                                           Phone
                                       </a>
-                                      <a href="https://www.eran.org.il/">
+                                      <a href="https://www.eran.org.il/"
+                                         target="_blank">
                                           <LanguageRoundedIcon
                                               sx={{
                                                   fontSize: 12,

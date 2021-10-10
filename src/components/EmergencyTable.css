@@ -1,11 +1,14 @@
 
+body{
+    color: #717b86;
+}
 .list-item-title{
     margin: 10px 10px 10px 10px;
 }
 
 .emergency-link a{
     margin:5px;
-    color: #7f7f7f;
+    color: #89939d;
     text-decoration: none;
 }
 
