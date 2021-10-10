@@ -47,11 +47,8 @@ const ConfessionTextField = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({
         clear: () => {
             setConfession("");
-            console.log("cleared confession!");
         }
     }));
-    console.log("color2:" + textBoxBorder);
-
 
     return (
         <Grid item xs={12}>

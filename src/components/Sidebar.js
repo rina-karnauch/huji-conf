@@ -21,7 +21,7 @@ function Sidebar() {
                 items={[
                     {
                         title: 'write a confession',
-                        itemId: '/',
+                        itemId: '/home',
                         // you can use your own custom Icon component as well
                         // icon is optional
                         elemBefore: () => <AiTwotoneFileText name="home" fontSize="24px"/>,
