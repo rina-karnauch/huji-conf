@@ -1,6 +1,6 @@
 import './MainContent.css';
 import '../themes/Themes.js';
-import {changeThemeCSS} from '../themes/Themes.js';
+// import {changeThemeCSS} from '../themes/Themes.js';
 import * as React from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
@@ -16,7 +16,7 @@ const MainContent = () => {
 
     const changeTheme = (newTheme) => {
         setTheme(newTheme);
-        changeThemeCSS(newTheme);
+        // changeThemeCSS(newTheme);
     }
 
     return (
