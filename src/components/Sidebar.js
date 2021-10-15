@@ -4,11 +4,27 @@ import {Navigation} from 'react-minimal-side-navigation';
 import {AiTwotoneFileText} from 'react-icons/ai';
 import {HiPhone} from 'react-icons/hi';
 import {useHistory} from "react-router-dom";
+import {lightTheme} from "../themes/lightTheme";
+import {darkTheme} from "../themes/darkTheme";
 
 
-function Sidebar() {
+function Sidebar(props) {
 
     const history = useHistory();
+
+    function renderTheme() {
+        let root = document.documentElement;
+
+        if (props.theme === 'light') {
+            root.style.setProperty('--sidebar-bg-color', lightTheme.sidebar);
+            root.style.setProperty('--border-color', lightTheme.sidebarBorder);
+        } else {
+            root.style.setProperty('--sidebar-bg-color', darkTheme.sidebar);
+            root.style.setProperty('--border-color', darkTheme.sidebarBorder);
+        }
+    }
+
+    renderTheme();
 
     return (
         <div className="side-bar">

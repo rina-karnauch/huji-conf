@@ -9,8 +9,6 @@ export default function App() {
     history.push('/home');
 
     return (
-        <div>
-            <MainContent/>
-        </div>
+        <MainContent/>
     );
 }

@@ -9,6 +9,8 @@ import ConfessionTextField from "./ConfessionTable/ConfessionTextField"
 import NumberSwitch from "./ConfessionTable/NumberSwitch";
 import {useState, useRef} from "react";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
+import {lightTheme} from "../themes/lightTheme";
+import {darkTheme} from "../themes/darkTheme";
 
 const ColorButton = styled(Button)(({theme}) => ({
     color: theme.palette.getContrastText("#4a5465"),
@@ -18,7 +20,7 @@ const ColorButton = styled(Button)(({theme}) => ({
     },
 }));
 
-const ConfessionsTable = () => {
+const ConfessionsTable = (props) => {
 
     const [confession, setConfession] = useState('');
     const [ID, setID] = useState('');
@@ -78,12 +80,35 @@ const ConfessionsTable = () => {
 
     }
 
+    function renderTheme() {
+        let root = document.documentElement;
+
+        if (props.theme === 'light') {
+            root.style.setProperty('--confession-table-bg', lightTheme.confessionBG);
+            root.style.setProperty('--confestion-table-border', lightTheme.confessionBorder);
+        } else {
+            root.style.setProperty('--confession-table-bg', darkTheme.confessionBG);
+            root.style.setProperty('--confestion-table-border', darkTheme.confessionBorder);
+        }
+    }
+
+    renderTheme();
+
     return (
         <div className="content-table">
             <Grid container spacing={2}>
-                <ConfessionTableTitle title="Send a Confession" icon={<EmailTwoToneIcon/>}/>
-                <ConfessionTextField onSaveConfessionText={onSaveConfessionText} ref={confessionTextRef}/>
-                <NumberSwitch onCommentToExistingConfession={onCommentToExistingConfession} ref={numberSwitchRef}/>
+                <ConfessionTableTitle
+                    theme={props.theme}
+                    title="Send a Confession"
+                    icon={<EmailTwoToneIcon/>} />
+                <ConfessionTextField
+                    theme={props.theme}
+                    onSaveConfessionText={onSaveConfessionText}
+                    ref={confessionTextRef}/>
+                <NumberSwitch
+                    theme={props.theme}
+                    onCommentToExistingConfession={onCommentToExistingConfession}
+                    ref={numberSwitchRef} />
                 <Grid item xs={12}>
                     <ColorButton variant="contained" fullWidth
                                  onClick={onSubmission}

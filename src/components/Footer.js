@@ -1,6 +1,23 @@
 import './Footer.css';
+import {lightTheme} from "../themes/lightTheme";
+import {darkTheme} from "../themes/darkTheme";
 
-const Footer = () => {
+const Footer = (props) => {
+
+    function renderTheme(){
+        let root = document.documentElement;
+
+        if (props.theme === 'light') {
+            root.style.setProperty('--footer-bg', lightTheme.footerBG);
+            root.style.setProperty('--footer-border', lightTheme.footerBorder);
+        } else {
+            root.style.setProperty('--footer-bg', darkTheme.footerBG);
+            root.style.setProperty('--footer-border', darkTheme.footerBorder);
+        }
+    }
+
+    renderTheme();
+
     return (
         <div className="footer-main">
             <div className="text-width">

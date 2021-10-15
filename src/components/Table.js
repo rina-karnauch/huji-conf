@@ -1,16 +1,23 @@
 import ConfessionsTable from "./ConfessionsTable";
 import './Table.css';
-import {BrowserRouter as Router, Route, Switch, useHistory} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import EmergencyTable from "./EmergencyTable";
 import * as React from "react";
 
-const Table = () => {
+const Table = (props) => {
 
     return (
         <div className="main-table">
             <Switch>
-                <Route exact path="/home" component={ConfessionsTable}/>
-                <Route exact path="/hotlines" component={EmergencyTable}/>
+                <Route exact path="/home"
+                       render={() => (
+                           <ConfessionsTable theme={props.theme}/>
+                       )}
+                />
+                <Route exact path="/hotlines"
+                       render={() => (
+                           <EmergencyTable theme={props.theme}/>
+                       )}/>
             </Switch>
         </div>
     );

@@ -1,9 +1,12 @@
 import "./NumberSwitch.css"
 import React, {forwardRef, useState, useImperativeHandle} from 'react';
 import Grid from "@mui/material/Grid";
-import {CssTextField} from "./ConfessionTextField";
+import {lightTheme} from "../../themes/lightTheme";
+import {darkTheme} from "../../themes/darkTheme";
 import {alpha, styled} from '@mui/material/styles';
 import Switch from "@mui/material/Switch";
+import TextField from "@mui/material/TextField";
+
 
 const label = {inputProps: {'aria-label': 'confession number switch'}};
 
@@ -18,10 +21,46 @@ const CostumedSwitch = styled(Switch)(({theme}) => ({
         backgroundColor: "#84bcd4"
     }
 }));
+
 const NumberSwitch = forwardRef((props, ref) => {
 
     const [disabled, setDisabled] = useState(true);
     const [text, setText] = useState('');
+
+    let textBoxBorder = props.theme === 'light' ? lightTheme.textBoxBorder : darkTheme.textBoxBorder;
+    // styling of text box
+    const CssTextField = styled(TextField)({
+
+        '& label': {
+            color:textBoxBorder,
+        },
+        '& label.Mui-focused': {
+            color: textBoxBorder,
+        },
+        '& label.Mui-disabled': {
+            color: textBoxBorder,
+        },
+        '& .MuiInputBase-root': {
+            color:textBoxBorder,
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: textBoxBorder,
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: textBoxBorder,
+            },
+            '&:hover fieldset': {
+                borderColor: textBoxBorder,
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: textBoxBorder,
+            },
+            '&.Mui-disabled fieldset': {
+                borderColor: textBoxBorder,
+            }
+        },
+    });
 
     function handleConfessionNumberBox(event) {
         setDisabled(!disabled);

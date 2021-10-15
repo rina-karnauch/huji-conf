@@ -14,10 +14,27 @@ import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle";
 import ListItemText from '@mui/material/ListItemText';
+import {lightTheme} from "../themes/lightTheme";
+import {darkTheme} from "../themes/darkTheme";
 
 // const grey
 
-const EmergencyTable = () => {
+const EmergencyTable = (props) => {
+
+    function renderTheme() {
+        let root = document.documentElement;
+
+        if (props.theme === 'light') {
+            root.style.setProperty('--confession-table-bg', lightTheme.confessionBG);
+            root.style.setProperty('--confestion-table-border', lightTheme.confessionBorder);
+        } else {
+            root.style.setProperty('--confession-table-bg', darkTheme.confessionBG);
+            root.style.setProperty('--confestion-table-border', darkTheme.confessionBorder);
+        }
+    }
+
+    renderTheme();
+
     return (
         <div className="content-table">
             <ConfessionTableTitle title="Emergency Hotlines" icon={<AddIcCallTwoToneIcon/>}/>

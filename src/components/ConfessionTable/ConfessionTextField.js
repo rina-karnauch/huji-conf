@@ -3,41 +3,9 @@ import {Grid} from "@mui/material";
 import {styled} from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import {forwardRef, useImperativeHandle, useState} from "react";
-import {textBoxBorder} from "../Header";
+import {lightTheme} from "../../themes/lightTheme";
+import {darkTheme} from "../../themes/darkTheme";
 
-// styling of text box
-export const CssTextField = styled(TextField)({
-
-    '& label': {
-        color:textBoxBorder,
-    },
-    '& label.Mui-focused': {
-        color: textBoxBorder,
-    },
-    '& label.Mui-disabled': {
-        color: textBoxBorder,
-    },
-    '& .MuiInputBase-root': {
-        color:textBoxBorder,
-    },
-    '& .MuiInput-underline:after': {
-        borderBottomColor: textBoxBorder,
-    },
-    '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-            borderColor: textBoxBorder,
-        },
-        '&:hover fieldset': {
-            borderColor: textBoxBorder,
-        },
-        '&.Mui-focused fieldset': {
-            borderColor: textBoxBorder,
-        },
-        '&.Mui-disabled fieldset': {
-            borderColor: textBoxBorder,
-        }
-    },
-});
 
 const ConfessionTextField = forwardRef((props, ref) => {
 
@@ -49,6 +17,47 @@ const ConfessionTextField = forwardRef((props, ref) => {
             setConfession("");
         }
     }));
+
+    let textBoxBorder;
+    if (props.theme === 'light') {
+        textBoxBorder = lightTheme.textBoxBorder;
+    } else {
+        textBoxBorder = darkTheme.textBoxBorder;
+    }
+
+    // styling of text box
+    const CssTextField = styled(TextField)({
+
+        '& label': {
+            color: textBoxBorder,
+        },
+        '& label.Mui-focused': {
+            color: textBoxBorder,
+        },
+        '& label.Mui-disabled': {
+            color: textBoxBorder,
+        },
+        '& .MuiInputBase-root': {
+            color: textBoxBorder,
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: textBoxBorder,
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: textBoxBorder,
+            },
+            '&:hover fieldset': {
+                borderColor: textBoxBorder,
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: textBoxBorder,
+            },
+            '&.Mui-disabled fieldset': {
+                borderColor: textBoxBorder,
+            }
+        },
+    });
 
     return (
         <Grid item xs={12}>
