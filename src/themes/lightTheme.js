@@ -6,7 +6,9 @@ export const lightTheme = {
     headerBorder:"#dbdbdb",
     confessionBG:"#f5f5f5",
     confessionBorder:"#dbdbdb",
+    confessionTitle:"#4a5465",
     footerBG:"#efefef",
     footerBorder:"#dbdbdb",
-    textBoxBorder:"#dbdbdb",
+    labelColor:"#61727f",
+    textBoxBorder:"#c7c7c7",
 }

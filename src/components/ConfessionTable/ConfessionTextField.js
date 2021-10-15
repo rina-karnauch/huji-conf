@@ -18,18 +18,20 @@ const ConfessionTextField = forwardRef((props, ref) => {
         }
     }));
 
-    let textBoxBorder;
+    let textBoxBorder, labelColor;
     if (props.theme === 'light') {
         textBoxBorder = lightTheme.textBoxBorder;
+        labelColor = lightTheme.labelColor
     } else {
         textBoxBorder = darkTheme.textBoxBorder;
+        labelColor = darkTheme.labelColor
     }
 
     // styling of text box
     const CssTextField = styled(TextField)({
 
         '& label': {
-            color: textBoxBorder,
+            color: labelColor,
         },
         '& label.Mui-focused': {
             color: textBoxBorder,

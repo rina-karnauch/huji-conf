@@ -6,7 +6,9 @@ export const darkTheme = {
     headerBorder:"#1a1f25",
     confessionBG:"#0d1116",
     confessionBorder:"#1a1f25",
+    confessionTitle:"#c8d0d9",
     footerBG:"#161b22",
     footerBorder:"#1a1f25",
-    textBoxBorder:"#1a1f25",
+    labelColor:"#c8d0d9",
+    textBoxBorder:"#c8d0d9",
 }
