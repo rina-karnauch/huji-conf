@@ -7,18 +7,6 @@ import {darkTheme} from "../../themes/darkTheme";
 const ConfessionTableTitle = (props) => {
     //title: Send a Confession
 
-    function renderTheme(){
-        let root = document.documentElement;
-
-        if (props.theme === 'light') {
-            root.style.setProperty('--confession-title-color', lightTheme.confessionTitle);
-        } else {
-            root.style.setProperty('--confession-title-color', darkTheme.confessionTitle);
-        }
-    }
-
-    renderTheme();
-
     return (
         <Grid item xs={12}>
             <div className="confession-box-title">

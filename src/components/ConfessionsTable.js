@@ -82,6 +82,7 @@ const ConfessionsTable = (props) => {
         if (props.theme === 'light') {
             root.style.setProperty('--confession-table-bg', lightTheme.confessionBG);
             root.style.setProperty('--confession-table-border', lightTheme.confessionBorder);
+            root.style.setProperty('--confession-table-title', lightTheme.confessionTitle);
             submitButtonBG = lightTheme.submitButtonBG;
             submitButtonHoverBG = lightTheme.submitButtonHoverBG;
             confessionTitle = lightTheme.confessionTitle;
@@ -90,6 +91,7 @@ const ConfessionsTable = (props) => {
         } else {
             root.style.setProperty('--confession-table-bg', darkTheme.confessionBG);
             root.style.setProperty('--confession-table-border', darkTheme.confessionBorder);
+            root.style.setProperty('--confession-table-title', darkTheme.confessionTitle);
             submitButtonBG = darkTheme.submitButtonBG;
             submitButtonHoverBG = darkTheme.submitButtonHoverBG;
             confessionTitle = darkTheme.confessionTitle;
@@ -102,8 +104,8 @@ const ConfessionsTable = (props) => {
 
     const ColorButton = styled(Button)(({theme}) => ({
         color: confessionTitle,
-        boxShadow:"none",
-        border:"1px solid " + submitBorder,
+        boxShadow: "none",
+        border: "1px solid " + submitBorder,
         backgroundColor: submitButtonBG,
         '&:hover': {
             backgroundColor: submitButtonHoverBG,
