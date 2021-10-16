@@ -12,13 +12,6 @@ import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
 
-const ColorButton = styled(Button)(({theme}) => ({
-    color: theme.palette.getContrastText("#4a5465"),
-    backgroundColor: "#4a5465",
-    '&:hover': {
-        backgroundColor: "#85bfd0",
-    },
-}));
 
 const ConfessionsTable = (props) => {
 
@@ -80,19 +73,44 @@ const ConfessionsTable = (props) => {
 
     }
 
+
+    let submitButtonBG, submitButtonHoverBG, confessionTitle, submitTextHover, submitBorder;
+
     function renderTheme() {
         let root = document.documentElement;
 
         if (props.theme === 'light') {
             root.style.setProperty('--confession-table-bg', lightTheme.confessionBG);
             root.style.setProperty('--confestion-table-border', lightTheme.confessionBorder);
+            submitButtonBG = lightTheme.submitButtonBG;
+            submitButtonHoverBG = lightTheme.submitButtonHoverBG;
+            confessionTitle = lightTheme.confessionTitle;
+            submitTextHover = lightTheme.submitTextHover;
+            submitBorder = lightTheme.submitBorder;
         } else {
             root.style.setProperty('--confession-table-bg', darkTheme.confessionBG);
             root.style.setProperty('--confestion-table-border', darkTheme.confessionBorder);
+            submitButtonBG = darkTheme.submitButtonBG;
+            submitButtonHoverBG = darkTheme.submitButtonHoverBG;
+            confessionTitle = darkTheme.confessionTitle;
+            submitTextHover = darkTheme.submitTextHover;
+            submitBorder = darkTheme.submitBorder;
         }
     }
 
     renderTheme();
+
+    const ColorButton = styled(Button)(({theme}) => ({
+        color: confessionTitle,
+        boxShadow:"none",
+        border:"1px solid " + submitBorder,
+        backgroundColor: submitButtonBG,
+        '&:hover': {
+            backgroundColor: submitButtonHoverBG,
+            color: submitTextHover,
+            boxShadow: "none",
+        },
+    }));
 
     return (
         <div className="content-table">
@@ -100,7 +118,7 @@ const ConfessionsTable = (props) => {
                 <ConfessionTableTitle
                     theme={props.theme}
                     title="Send a Confession"
-                    icon={<EmailTwoToneIcon/>} />
+                    icon={<EmailTwoToneIcon/>}/>
                 <ConfessionTextField
                     theme={props.theme}
                     onSaveConfessionText={onSaveConfessionText}
@@ -108,7 +126,7 @@ const ConfessionsTable = (props) => {
                 <NumberSwitch
                     theme={props.theme}
                     onCommentToExistingConfession={onCommentToExistingConfession}
-                    ref={numberSwitchRef} />
+                    ref={numberSwitchRef}/>
                 <Grid item xs={12}>
                     <ColorButton variant="contained" fullWidth
                                  onClick={onSubmission}
