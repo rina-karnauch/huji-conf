@@ -19,12 +19,12 @@ function Sidebar(props) {
             root.style.setProperty('--sidebar-bg-color', lightTheme.sidebar);
             root.style.setProperty('--border-color', lightTheme.sidebarBorder);
             root.style.setProperty('--sidebar-hover-color', lightTheme.sidebarHoverBG);
-            root.style.setProperty('--sidebar-hover-text', lightTheme.sidebarHoverText);
+            root.style.setProperty('--sidebar-text', lightTheme.sidebarText);
         } else {
             root.style.setProperty('--sidebar-bg-color', darkTheme.sidebar);
             root.style.setProperty('--border-color', darkTheme.sidebarBorder);
             root.style.setProperty('--sidebar-hover-color', darkTheme.sidebarHoverBG);
-            root.style.setProperty('--sidebar-hover-text', darkTheme.sidebarHoverText);
+            root.style.setProperty('--sidebar-text', darkTheme.sidebarText);
         }
     }
 

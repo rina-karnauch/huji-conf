@@ -3,7 +3,7 @@ export const lightTheme = {
     sidebar:"#f5f5f5",
     sidebarBorder:"#ececec",
     sidebarHoverBG:"#e0e0e0",
-    sidebarHoverText:"#5f6f89",
+    sidebarText:"#61727f",
     headerBG:"#85bfd0",
     headerBorder:"#dbdbdb",
     submitButtonBG :"#e5e5e5",

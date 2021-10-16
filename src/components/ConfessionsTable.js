@@ -81,7 +81,7 @@ const ConfessionsTable = (props) => {
 
         if (props.theme === 'light') {
             root.style.setProperty('--confession-table-bg', lightTheme.confessionBG);
-            root.style.setProperty('--confestion-table-border', lightTheme.confessionBorder);
+            root.style.setProperty('--confession-table-border', lightTheme.confessionBorder);
             submitButtonBG = lightTheme.submitButtonBG;
             submitButtonHoverBG = lightTheme.submitButtonHoverBG;
             confessionTitle = lightTheme.confessionTitle;
@@ -89,7 +89,7 @@ const ConfessionsTable = (props) => {
             submitBorder = lightTheme.submitBorder;
         } else {
             root.style.setProperty('--confession-table-bg', darkTheme.confessionBG);
-            root.style.setProperty('--confestion-table-border', darkTheme.confessionBorder);
+            root.style.setProperty('--confession-table-border', darkTheme.confessionBorder);
             submitButtonBG = darkTheme.submitButtonBG;
             submitButtonHoverBG = darkTheme.submitButtonHoverBG;
             confessionTitle = darkTheme.confessionTitle;

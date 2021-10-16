@@ -8,16 +8,13 @@ import FemaleRoundedIcon from '@mui/icons-material/FemaleRounded';
 import MaleRoundedIcon from '@mui/icons-material/MaleRounded';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import IconButton from '@mui/material/IconButton';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
-import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle";
 import ListItemText from '@mui/material/ListItemText';
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
 
-// const grey
 
 const EmergencyTable = (props) => {
 
@@ -26,10 +23,12 @@ const EmergencyTable = (props) => {
 
         if (props.theme === 'light') {
             root.style.setProperty('--confession-table-bg', lightTheme.confessionBG);
-            root.style.setProperty('--confestion-table-border', lightTheme.confessionBorder);
+            root.style.setProperty('--confession-table-border', lightTheme.confessionBorder);
+            root.style.setProperty('--confession-table-title', lightTheme.confessionTitle);
         } else {
             root.style.setProperty('--confession-table-bg', darkTheme.confessionBG);
-            root.style.setProperty('--confestion-table-border', darkTheme.confessionBorder);
+            root.style.setProperty('--confession-table-border', darkTheme.confessionBorder);
+            root.style.setProperty('--confession-table-title', darkTheme.confessionTitle);
         }
     }
 
