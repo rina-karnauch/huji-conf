@@ -78,13 +78,13 @@ span.space{
     }
 }
 
-@media (max-width:360px) {
+@media (max-width:300px) {
     .side-icons {
-        display:none;
+        /*display:none;*/
     }
 
     .title-text{
-        word-break: keep-all;
+        display:none;
     }
 }
 
