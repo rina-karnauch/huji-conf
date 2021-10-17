@@ -16,6 +16,6 @@ export const darkTheme = {
     switchTextColor: "#c9d1d9",
     footerBG:"#161b22",
     footerBorder:"#1a1f25",
-    labelColor:"#90969c",
+    labelColor:"#c9d1d9",
     textBoxBorder:"#90969c",
 }

@@ -13,13 +13,13 @@ const useStyles = makeStyles({
             color: props.labelColor,
         },
         '& label.Mui-focused': {
-            color: props.textBoxBorder,
+            color: props.labelColor,
         },
         '& label.Mui-disabled': {
             color: props.textBoxBorder,
         },
         '& .MuiInputBase-root': {
-            color: props.textBoxBorder,
+            color: props.labelColor,
         },
         '& .MuiInput-underline:after': {
             borderBottomColor: props.textBoxBorder,
