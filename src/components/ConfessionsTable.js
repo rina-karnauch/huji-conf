@@ -55,21 +55,23 @@ const ConfessionsTable = (props) => {
                 method: 'post',
                 mode: 'no-cors'
             });
-
-        // into firebase
-        fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
-            method: 'POST',
-            body: JSON.stringify(confessionJSON.confessions),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        //
+        // // into firebase
+        // fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
+        //     method: 'POST',
+        //     body: JSON.stringify(confessionJSON.confessions),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // });
 
         // clearing data
         numberSwitchRef.current.clear();
         confessionTextRef.current.clear();
         setID('');
         setConfession('');
+
+        console.log("im here in change of submition");
 
     }
 
@@ -123,7 +125,10 @@ const ConfessionsTable = (props) => {
                     icon={<EmailTwoToneIcon/>}/>
                 <ConfessionTextField
                     theme={props.theme}
-                    onSaveConfessionText={onSaveConfessionText}
+                    onSaveConfessionText={() => {
+                        onSaveConfessionText();
+                        console.log("im here in change of textBox");
+                    }}
                     ref={confessionTextRef}/>
                 <NumberSwitch
                     theme={props.theme}

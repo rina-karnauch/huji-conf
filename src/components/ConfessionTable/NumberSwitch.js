@@ -97,10 +97,12 @@ const NumberSwitch = forwardRef((props, ref) => {
             setText('');
         }
         props.onCommentToExistingConfession(event.target.value);
+
     }
 
     // colors for theme and for text box
     let textBoxBorder, labelColor;
+
     // changing colors
     function renderTheme() {
         let root = document.documentElement;
@@ -115,6 +117,7 @@ const NumberSwitch = forwardRef((props, ref) => {
             labelColor = darkTheme.labelColor
         }
     }
+
     // changing colors to current theme
     renderTheme();
 

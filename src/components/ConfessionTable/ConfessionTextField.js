@@ -10,32 +10,32 @@ import {darkTheme} from "../../themes/darkTheme";
 const useStyles = makeStyles({
     cssTextField: props => ({
         '& label': {
-            color: props.labelColor,
+            color: props.labelcolor,
         },
         '& label.Mui-focused': {
-            color: props.labelColor,
+            color: props.labelcolor,
         },
         '& label.Mui-disabled': {
-            color: props.textBoxBorder,
+            color: props.textboxborder,
         },
         '& .MuiInputBase-root': {
-            color: props.labelColor,
+            color: props.labelcolor,
         },
         '& .MuiInput-underline:after': {
-            borderBottomColor: props.textBoxBorder,
+            borderBottomColor: props.textboxborder,
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: props.textBoxBorder,
+                borderColor: props.textboxborder,
             },
             '&:hover fieldset': {
-                borderColor: props.textBoxBorder,
+                borderColor: props.textboxborder,
             },
             '&.Mui-focused fieldset': {
-                borderColor: props.textBoxBorder,
+                borderColor: props.textboxborder,
             },
             '&.Mui-disabled fieldset': {
-                borderColor: props.textBoxBorder,
+                borderColor: props.textboxborder,
             }
         },
     }),
@@ -64,15 +64,15 @@ const ConfessionTextField = forwardRef((props, ref) => {
 
     // props to cssButton styling
     // its not inside because of the "onChange" rendring each time
-    const classes = useStyles({labelColor: labelColor, textBoxBorder: textBoxBorder});
+    const classes = useStyles({labelcolor: labelColor, textboxborder: textBoxBorder});
 
     return (
         <Grid item xs={12}>
             <TextField className={classes.cssTextField}
                        fullWidth multiline
                        id="fullWidth"
-                       labelColor={labelColor}
-                       textBoxBorder={textBoxBorder}
+                       labelcolor={labelColor}
+                       textboxborder={textBoxBorder}
                        size="medium"
                        rows={4}
                        label="write what's on your mind"
