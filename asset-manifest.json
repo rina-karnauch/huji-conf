@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/huji-conf/static/css/main.697778a0.chunk.css",
-    "main.js": "/huji-conf/static/js/main.0a3d03aa.chunk.js",
-    "main.js.map": "/huji-conf/static/js/main.0a3d03aa.chunk.js.map",
+    "main.css": "/huji-conf/static/css/main.3f37fce6.chunk.css",
+    "main.js": "/huji-conf/static/js/main.62f731d8.chunk.js",
+    "main.js.map": "/huji-conf/static/js/main.62f731d8.chunk.js.map",
     "runtime-main.js": "/huji-conf/static/js/runtime-main.8e626bbd.js",
     "runtime-main.js.map": "/huji-conf/static/js/runtime-main.8e626bbd.js.map",
     "static/css/2.c2dcea20.chunk.css": "/huji-conf/static/css/2.c2dcea20.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.996d91ae.chunk.js.map": "/huji-conf/static/js/2.996d91ae.chunk.js.map",
     "index.html": "/huji-conf/index.html",
     "static/css/2.c2dcea20.chunk.css.map": "/huji-conf/static/css/2.c2dcea20.chunk.css.map",
-    "static/css/main.697778a0.chunk.css.map": "/huji-conf/static/css/main.697778a0.chunk.css.map",
+    "static/css/main.3f37fce6.chunk.css.map": "/huji-conf/static/css/main.3f37fce6.chunk.css.map",
     "static/js/2.996d91ae.chunk.js.LICENSE.txt": "/huji-conf/static/js/2.996d91ae.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8e626bbd.js",
     "static/css/2.c2dcea20.chunk.css",
     "static/js/2.996d91ae.chunk.js",
-    "static/css/main.697778a0.chunk.css",
-    "static/js/main.0a3d03aa.chunk.js"
+    "static/css/main.3f37fce6.chunk.css",
+    "static/js/main.62f731d8.chunk.js"
   ]
 }
