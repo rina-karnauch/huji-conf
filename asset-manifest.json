@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/huji-conf/static/css/main.3f37fce6.chunk.css",
-    "main.js": "/huji-conf/static/js/main.62f731d8.chunk.js",
-    "main.js.map": "/huji-conf/static/js/main.62f731d8.chunk.js.map",
+    "main.js": "/huji-conf/static/js/main.5a749c9f.chunk.js",
+    "main.js.map": "/huji-conf/static/js/main.5a749c9f.chunk.js.map",
     "runtime-main.js": "/huji-conf/static/js/runtime-main.8e626bbd.js",
     "runtime-main.js.map": "/huji-conf/static/js/runtime-main.8e626bbd.js.map",
     "static/css/2.c2dcea20.chunk.css": "/huji-conf/static/css/2.c2dcea20.chunk.css",
-    "static/js/2.996d91ae.chunk.js": "/huji-conf/static/js/2.996d91ae.chunk.js",
-    "static/js/2.996d91ae.chunk.js.map": "/huji-conf/static/js/2.996d91ae.chunk.js.map",
+    "static/js/2.c0023978.chunk.js": "/huji-conf/static/js/2.c0023978.chunk.js",
+    "static/js/2.c0023978.chunk.js.map": "/huji-conf/static/js/2.c0023978.chunk.js.map",
     "index.html": "/huji-conf/index.html",
     "static/css/2.c2dcea20.chunk.css.map": "/huji-conf/static/css/2.c2dcea20.chunk.css.map",
     "static/css/main.3f37fce6.chunk.css.map": "/huji-conf/static/css/main.3f37fce6.chunk.css.map",
-    "static/js/2.996d91ae.chunk.js.LICENSE.txt": "/huji-conf/static/js/2.996d91ae.chunk.js.LICENSE.txt"
+    "static/js/2.c0023978.chunk.js.LICENSE.txt": "/huji-conf/static/js/2.c0023978.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8e626bbd.js",
     "static/css/2.c2dcea20.chunk.css",
-    "static/js/2.996d91ae.chunk.js",
+    "static/js/2.c0023978.chunk.js",
     "static/css/main.3f37fce6.chunk.css",
-    "static/js/main.62f731d8.chunk.js"
+    "static/js/main.5a749c9f.chunk.js"
   ]
 }
