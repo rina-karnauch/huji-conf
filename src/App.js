@@ -5,8 +5,8 @@ import {useHistory} from "react-router-dom";
 
 export default function App() {
 
-    const history = useHistory();
-    history.push('/home');
+    // const history = useHistory();
+    // history.push('/home');
 
     return (
         <MainContent/>

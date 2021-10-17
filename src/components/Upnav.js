@@ -26,7 +26,7 @@ const Upnav = (props) => {
                 items={[
                     {
                         title: 'write a confessions',
-                        itemId: '/home',
+                        itemId: '/',
                         // you can use your own custom Icon component as well
                         // icon is optional
                         elemBefore: () => <AiTwotoneFileText name="home"/>,

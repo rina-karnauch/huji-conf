@@ -5,6 +5,7 @@
     --header-border:#6c99a7;
 }
 .header-line{
+    line-height:55px;
     height:55px;
     width:100%;
 
@@ -12,7 +13,6 @@
     border-bottom: 1px solid var(--header-border);
 
     font-family: 'Bebas Neue', cursive;
-    font-size:40px;
     font-weight: 600;
     color: #ffffff;
     letter-spacing: 2px;
@@ -33,25 +33,25 @@
 }
 
 .title-text{
+    font-size:28px;
     display:inline-block;
     position:relative;
     left:15px;
-    top:7px;
 }
 
 .lock-icon{
-    font-size:30px;
+    font-size:28px;
     display:inline-block;
     position:relative;
     left:7px;
-    top:7px;
+    top:5px;
 }
 
 .side-icons{
     font-size:28px;
     display:inline-block;
     position:relative;
-    top:14px;
+    top:5px;
     right:15px;
     float:right;
 }
@@ -72,19 +72,16 @@ span.space{
     margin:5px;
 }
 
-@media (max-width:400px) {
-    .lock-icon{
-        display:none;
+@media (max-width:320px) {
+    .title-text {
+        /*word-wrap:break-word;*/
+        font-size:7vw;
     }
-}
-
-@media (max-width:300px) {
-    .side-icons {
-        /*display:none;*/
+    .lock-icon {
+        font-size:7vw;
     }
-
-    .title-text{
-        display:none;
+    .side-icons{
+        font-size:7vw;
     }
 }
 

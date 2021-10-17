@@ -29,7 +29,7 @@ const Header = (props) => {
     return (
         <div className="header-line">
             <FcLock className="lock-icon"/>
-            <div className="title-text">Confessions</div>
+            <div className="title-text">Some Confessions</div>
             <div className="side-icons">
                 <GiNightSky className="night-mode" onClick={changeTheme}
                 />

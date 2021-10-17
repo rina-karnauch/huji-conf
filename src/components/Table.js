@@ -9,7 +9,7 @@ const Table = (props) => {
     return (
         <div className="main-table">
             <Switch>
-                <Route exact path="/home"
+                <Route exact path="/"
                        render={() => (
                            <ConfessionsTable theme={props.theme}/>
                        )}

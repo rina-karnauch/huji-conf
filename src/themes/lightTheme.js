@@ -7,7 +7,7 @@ export const lightTheme = {
     headerBG:"#85bfd0",
     headerBorder:"#dbdbdb",
     submitButtonBG :"#e5e5e5",
-    submitButtonHoverBG:"#85bfd0",
+    submitButtonHoverBG:"#d2d2d2",
     submitTextHover:"#45717d",
     submitBorder:"#e3e3e3",
     confessionBG:"#f5f5f5",
