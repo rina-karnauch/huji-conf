@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/huji-conf/static/css/main.3f37fce6.chunk.css",
-    "main.js": "/huji-conf/static/js/main.a4ece674.chunk.js",
-    "main.js.map": "/huji-conf/static/js/main.a4ece674.chunk.js.map",
+    "main.js": "/huji-conf/static/js/main.98cb3620.chunk.js",
+    "main.js.map": "/huji-conf/static/js/main.98cb3620.chunk.js.map",
     "runtime-main.js": "/huji-conf/static/js/runtime-main.8e626bbd.js",
     "runtime-main.js.map": "/huji-conf/static/js/runtime-main.8e626bbd.js.map",
     "static/css/2.c2dcea20.chunk.css": "/huji-conf/static/css/2.c2dcea20.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.c2dcea20.chunk.css",
     "static/js/2.cdb316aa.chunk.js",
     "static/css/main.3f37fce6.chunk.css",
-    "static/js/main.a4ece674.chunk.js"
+    "static/js/main.98cb3620.chunk.js"
   ]
 }
