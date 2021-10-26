@@ -21,6 +21,7 @@ const ConfessionsTable = (props) => {
     const confessionTextRef = useRef();
 
     const onSaveConfessionText = (data) => {
+        console.log(data);
         setConfession(data);
     }
 
@@ -70,8 +71,6 @@ const ConfessionsTable = (props) => {
         confessionTextRef.current.clear();
         setID('');
         setConfession('');
-
-        console.log("im here in change of submition");
 
     }
 
@@ -125,9 +124,8 @@ const ConfessionsTable = (props) => {
                     icon={<EmailTwoToneIcon/>}/>
                 <ConfessionTextField
                     theme={props.theme}
-                    onSaveConfessionText={() => {
-                        onSaveConfessionText();
-                        console.log("im here in change of textBox");
+                    onSaveConfessionText={(data) => {
+                        onSaveConfessionText(data);
                     }}
                     ref={confessionTextRef}/>
                 <NumberSwitch

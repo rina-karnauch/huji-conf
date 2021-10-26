@@ -80,8 +80,8 @@ const ConfessionTextField = forwardRef((props, ref) => {
                        value={confession}
                        name="entry.638196057"
                        onChange={(event) => {
-                           setConfession(event.target.value)
-                           props.onSaveConfessionText(event.target.value)
+                           setConfession(event.target.value);
+                           props.onSaveConfessionText(event.target.value);
                        }}
             />
         </Grid>
