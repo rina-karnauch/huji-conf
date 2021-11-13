@@ -3,6 +3,8 @@
 :root{
     --header-bg:#85bfd0;
     --header-border:#6c99a7;
+    --lock-border: #73a8b8;
+    --lock-background: #7ab2c2;
 }
 .header-line{
     line-height:55px;
@@ -37,14 +39,20 @@
     display:inline-block;
     position:relative;
     left:15px;
+    top:1px;
 }
 
 .lock-icon{
-    font-size:28px;
+    border: 1px solid var(--lock-border);
+    background-color: var(--lock-background);
+    border-radius: 50%;
+    padding: 7px;
+    font-size:40px;
     display:inline-block;
     position:relative;
-    left:7px;
-    top:5px;
+    left:10px;
+    top:9px;
+    margin-right:10px;
 }
 
 .side-icons{

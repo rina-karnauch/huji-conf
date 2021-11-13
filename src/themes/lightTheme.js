@@ -19,4 +19,6 @@ export const lightTheme = {
     footerBorder:"#dbdbdb",
     labelColor:"#61727f",
     textBoxBorder:"#c7c7c7",
+    lockBG: "#7ab2c2",
+    lockBorder:"#73a8b8",
 }

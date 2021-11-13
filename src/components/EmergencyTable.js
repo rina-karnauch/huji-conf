@@ -14,8 +14,21 @@ import ListItemText from '@mui/material/ListItemText';
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
 
-
 const EmergencyTable = (props) => {
+
+    const ListIcon = () => {
+
+        const root = document.querySelector(':root');
+        const rootStyles = getComputedStyle(root);
+        const c = rootStyles.getPropertyValue('--confession-table-title');
+
+        return (
+            <ListItemIcon>
+                <CircleTwoToneIcon style={{
+                    color: c,
+                }}/>
+            </ListItemIcon>)
+    };
 
     function renderTheme() {
         let root = document.documentElement;
@@ -40,9 +53,10 @@ const EmergencyTable = (props) => {
                 eran
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
+                {/*<ListItemIcon>*/}
+                {/*    <CircleTwoToneIcon/>*/}
+                {/*</ListItemIcon>*/}
                 <ListItemText
                     className="list-item-title"
                     primary="ERAN: Emotional First Aid Services"
@@ -72,9 +86,7 @@ const EmergencyTable = (props) => {
                 sahar
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
                 <ListItemText
                     className="list-item-title"
                     primary="Sahar: on-line assistance for emotional distress"
@@ -96,9 +108,7 @@ const EmergencyTable = (props) => {
                 arcci
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
                 <ListItemText
                     className="list-item-title"
                     primary="ARCCI: Association of Rape Crisis Centers in Israel"
@@ -124,7 +134,6 @@ const EmergencyTable = (props) => {
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
-
                                         marginRight: 0.5
                                     }}/>
                                 Website
@@ -136,9 +145,7 @@ const EmergencyTable = (props) => {
                 huji psycho
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
                 <ListItemText
                     className="list-item-title"
                     primary="HUJI's Psychological Services"
@@ -175,9 +182,7 @@ const EmergencyTable = (props) => {
                 huji equal oppour'
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
                 <ListItemText
                     className="list-item-title"
                     primary="HUJI's Equal Opportunities"
@@ -199,9 +204,7 @@ const EmergencyTable = (props) => {
                 dean of students
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
                 <ListItemText
                     className="list-item-title"
                     primary="HUJI's Dean Of Students"
@@ -223,9 +226,7 @@ const EmergencyTable = (props) => {
                 aguda
             */}
             <ListItem>
-                <ListItemIcon>
-                    <CircleTwoToneIcon/>
-                </ListItemIcon>
+                <ListIcon/>
                 <ListItemText
                     className="list-item-title"
                     primary="Aguda: The Association for LGBTQ Equality in Israel"

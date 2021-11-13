@@ -18,4 +18,6 @@ export const darkTheme = {
     footerBorder:"#1a1f25",
     labelColor:"#bac1c7",
     textBoxBorder:"#90969c",
+    lockBG: "#10151a",
+    lockBorder:"#273139",
 }

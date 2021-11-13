@@ -18,9 +18,13 @@ const Header = (props) => {
         if (props.theme === 'light') {
             root.style.setProperty('--header-bg', lightTheme.headerBG);
             root.style.setProperty('--header-border', lightTheme.headerBorder);
+            root.style.setProperty('--lock-border', lightTheme.lockBorder);
+            root.style.setProperty('--lock-background', lightTheme.lockBG);
         } else {
             root.style.setProperty('--header-bg', darkTheme.headerBG);
             root.style.setProperty('--header-border', darkTheme.headerBorder);
+            root.style.setProperty('--lock-border', darkTheme.lockBorder);
+            root.style.setProperty('--lock-background', darkTheme.lockBG);
         }
     }
 
