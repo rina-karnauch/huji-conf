@@ -7,6 +7,7 @@
 }
 
 .side-bar {
+    display:none;
     border-right: 1px solid var(--border-color);
     background-color: var(--sidebar-bg-color);
     height: 100vh;
@@ -26,10 +27,4 @@
 
 .side-navigation-panel-select-option-selected{
     background-color: var(--sidebar-hover-color) !important;
-}
-
-@media (max-width: 600px) {
-    .side-bar {
-        display: none;
-    }
 }

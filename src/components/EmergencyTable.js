@@ -1,9 +1,8 @@
 import './EmergencyTable.css';
 import * as React from "react";
 import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone';
-import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import CircleTwoToneIcon from '@mui/icons-material/CircleTwoTone';
 import FemaleRoundedIcon from '@mui/icons-material/FemaleRounded';
 import MaleRoundedIcon from '@mui/icons-material/MaleRounded';
 import ListItem from '@mui/material/ListItem';
@@ -42,7 +41,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"
@@ -74,7 +73,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"
@@ -98,7 +97,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"
@@ -138,7 +137,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"
@@ -177,7 +176,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"
@@ -201,7 +200,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"
@@ -225,7 +224,7 @@ const EmergencyTable = (props) => {
             */}
             <ListItem>
                 <ListItemIcon>
-                    <KeyboardArrowRightIcon/>
+                    <CircleTwoToneIcon/>
                 </ListItemIcon>
                 <ListItemText
                     className="list-item-title"

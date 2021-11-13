@@ -4,12 +4,6 @@
     border-bottom:1px solid var(--border-color);
     background-color: var(--sidebar-bg-color);
     white-space: nowrap;
+    text-align: center;
     font-size:17px;
-}
-
-
-@media (min-width:600px){
-    .up-nav{
-        display:none;
-    }
 }
