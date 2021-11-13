@@ -1,5 +1,5 @@
 import './Header.css';
-import {FcLock} from 'react-icons/fc';
+import {GiSecretBook} from 'react-icons/gi';
 import {GiNightSky} from 'react-icons/gi';
 import {FaFacebook} from 'react-icons/fa'
 import {lightTheme} from '../themes/lightTheme'
@@ -32,7 +32,7 @@ const Header = (props) => {
 
     return (
         <div className="header-line">
-            <FcLock className="lock-icon"/>
+            <GiSecretBook className="lock-icon"/>
             <div className="title-text">Some Confessions</div>
             <div className="side-icons">
                 <GiNightSky className="night-mode" onClick={changeTheme}
