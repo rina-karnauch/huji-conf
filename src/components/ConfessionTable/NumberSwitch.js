@@ -11,16 +11,17 @@ import {makeStyles} from "@mui/styles";
 
 const label = {inputProps: {'aria-label': 'confession number switch'}};
 
+
 // styling of switch
 const CostumedSwitch = styled(Switch)(({theme}) => ({
     "& .MuiSwitch-switchBase.Mui-checked": {
-        color: "#3e505f",
+        color: "#b084d9",
         "&:hover": {
-            backgroundColor: alpha("#45717d", theme.palette.action.hoverOpacity)
+            backgroundColor: alpha("#b084d9", theme.palette.action.hoverOpacity)
         }
     },
     "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
-        backgroundColor: "#45717d"
+        backgroundColor: "#b084d9"
     },
     "& .MuiSwitch-switchBase": {
         color: "#c1c6c9"
@@ -67,6 +68,7 @@ const useStyles = makeStyles({
 
 // component
 const NumberSwitch = forwardRef((props, ref) => {
+
 
     const [disabled, setDisabled] = useState(true);
     const [text, setText] = useState('');

@@ -20,7 +20,7 @@ const EmergencyTable = (props) => {
 
         const root = document.querySelector(':root');
         const rootStyles = getComputedStyle(root);
-        const c = rootStyles.getPropertyValue('--confession-table-title');
+        const c = rootStyles.getPropertyValue('--confession-table-border');
 
         return (
             <ListItemIcon>

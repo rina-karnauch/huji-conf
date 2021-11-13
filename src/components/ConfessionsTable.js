@@ -104,9 +104,10 @@ const ConfessionsTable = (props) => {
     renderTheme();
 
     const ColorButton = styled(Button)(({theme}) => ({
-        color: confessionTitle,
+        color: submitTextHover,
         boxShadow: "none",
         border: "1px solid " + submitBorder,
+        borderRadius:"20px",
         backgroundColor: submitButtonBG,
         '&:hover': {
             backgroundColor: submitButtonHoverBG,
@@ -132,14 +133,18 @@ const ConfessionsTable = (props) => {
                     theme={props.theme}
                     onCommentToExistingConfession={onCommentToExistingConfession}
                     ref={numberSwitchRef}/>
-                <Grid item xs={12}>
-                    <ColorButton variant="contained" fullWidth
+                <Grid container
+                    direction="column"
+                    alignItems="flex-end"
+                    justify="flex-end">
+                    <ColorButton variant="contained"
                                  onClick={onSubmission}
                                  endIcon={<SendIcon/>}
                     >
                         submit
                     </ColorButton>
                 </Grid>
+
             </Grid>
         </div>
     );

@@ -1,6 +1,7 @@
 :root {
     --footer-bg: #efefef;
     --footer-border:#dbdbdb;
+    --link-color:#3799c1;
 }
 
 .footer-main {
@@ -34,6 +35,6 @@
 }
 
 .huji-text a {
-    color: #6896b4;
+    color:var(--link-color);
     font-weight: 700;
 }

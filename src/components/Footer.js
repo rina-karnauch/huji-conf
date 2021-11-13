@@ -10,9 +10,11 @@ const Footer = (props) => {
         if (props.theme === 'light') {
             root.style.setProperty('--footer-bg', lightTheme.footerBG);
             root.style.setProperty('--footer-border', lightTheme.footerBorder);
+            root.style.setProperty('--link-color', lightTheme.linkColor);
         } else {
             root.style.setProperty('--footer-bg', darkTheme.footerBG);
             root.style.setProperty('--footer-border', darkTheme.footerBorder);
+            root.style.setProperty('--link-color', darkTheme.linkColor);
         }
     }
 

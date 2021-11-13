@@ -18,5 +18,5 @@
 
 .emergency-link a:hover {
     transition: 0.3s;
-    border-bottom: 3px solid #85bfd0;
+    border-bottom: 3px solid var(--link-color);
 }
