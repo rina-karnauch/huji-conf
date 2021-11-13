@@ -36,7 +36,7 @@ const MainContent = () => {
             <Header theme={theme} onChangeTheme={changeTheme}/>
             <Upnav theme={theme}/>
             <div className="flex-container">
-                <Sidebar theme={theme}/>
+                {/*<Sidebar theme={theme}/>*/}
                 <Table theme={theme}/>
             </div>
             <Footer theme={theme}/>
