@@ -1,5 +1,5 @@
 import "./NumberSwitch.css"
-import React, {forwardRef, useState, useImperativeHandle} from 'react';
+import React, {forwardRef, useState, useRef, useImperativeHandle} from 'react';
 import Grid from "@mui/material/Grid";
 import {lightTheme} from "../../themes/lightTheme";
 import {darkTheme} from "../../themes/darkTheme";
@@ -99,7 +99,6 @@ const NumberSwitch = forwardRef((props, ref) => {
             setText('');
         }
         props.onCommentToExistingConfession(event.target.value);
-
     }
 
     // colors for theme and for text box
@@ -120,12 +119,33 @@ const NumberSwitch = forwardRef((props, ref) => {
         }
     }
 
+
     // changing colors to current theme
     renderTheme();
+
+    // only positive numbers
+    function validate(event) {
+        var theEvent = event || window.event;
+        var key;
+        // Handle paste
+        if (theEvent.type === 'paste') {
+            key = event.clipboardData.getData('text/plain');
+        } else {
+            // Handle key press
+            key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+            theEvent.returnValue = false;
+            if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }
 
     // props to cssButton styling
     // its not inside because of the "onChange" rendring each time
     const classes = useStyles({labelColor: labelColor, textBoxBorder: textBoxBorder});
+
 
     return (
         <Grid container
@@ -137,12 +157,13 @@ const NumberSwitch = forwardRef((props, ref) => {
             <CostumedSwitch {...label}
                             onChange={(event) => handleConfessionNumberBox(event)}/>
             <TextField
+                required
                 className={classes.cssTextField}
                 id="outlined-basic"
                 label="* number"
                 variant="outlined"
-                type="number"
                 disabled={disabled}
+                onKeyPress={(event) => validate(event)}
                 onChange={(event) => onChangeOfTextBox(event)}
                 value={text}
             />

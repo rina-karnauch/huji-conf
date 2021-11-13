@@ -70,8 +70,7 @@ const EmergencyTable = (props) => {
                                     }}/>
                                 Phone
                             </a>
-                            <a href="https://www.eran.org.il/"
-                               target="_blank">
+                            <a href="https://www.eran.org.il/">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -92,8 +91,7 @@ const EmergencyTable = (props) => {
                     primary="Sahar: on-line assistance for emotional distress"
                     secondary=
                         {<span className="emergency-link">
-                            <a href="https://sahar.org.il/"
-                               target="_blank">
+                            <a href="https://sahar.org.il/">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -129,8 +127,7 @@ const EmergencyTable = (props) => {
                                     }}
                                 /> Phone
                             </a>
-                            <a href="https://www.1202.org.il/"
-                               target="_blank">
+                            <a href="https://www.1202.org.il/">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -166,8 +163,7 @@ const EmergencyTable = (props) => {
                                         marginRight: 0.5
                                     }}/> Phone
                             </a>
-                            <a href="https://studean.huji.ac.il/book/%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A1%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%92%D7%99"
-                               target="_blank">
+                            <a href="https://studean.huji.ac.il/book/%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A1%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%92%D7%99">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -188,8 +184,7 @@ const EmergencyTable = (props) => {
                     primary="HUJI's Equal Opportunities"
                     secondary=
                         {<span className="emergency-link">
-                            <a href="https://studean.huji.ac.il/%D7%A9%D7%99%D7%95%D7%95%D7%99%D7%95%D7%9F-%D7%94%D7%96%D7%93%D7%9E%D7%A0%D7%95%D7%99%D7%95%D7%AA"
-                               target="_blank">
+                            <a href="https://studean.huji.ac.il/%D7%A9%D7%99%D7%95%D7%95%D7%99%D7%95%D7%9F-%D7%94%D7%96%D7%93%D7%9E%D7%A0%D7%95%D7%99%D7%95%D7%AA">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -210,8 +205,7 @@ const EmergencyTable = (props) => {
                     primary="HUJI's Dean Of Students"
                     secondary=
                         {<span className="emergency-link">
-                            <a href="https://sf_prod_bg.formtitan.com/ftbe37b9791569231113071#/"
-                               target="_blank">
+                            <a href="https://sf_prod_bg.formtitan.com/ftbe37b9791569231113071#/">
                                 <LanguageRoundedIcon
                                     sx={{
                                         fontSize: 12,
@@ -240,8 +234,7 @@ const EmergencyTable = (props) => {
                                               }}/>
                                           Phone
                                       </a>
-                                      <a href="https://www.eran.org.il/"
-                                         target="_blank">
+                                      <a href="https://www.eran.org.il/">
                                           <LanguageRoundedIcon
                                               sx={{
                                                   fontSize: 12,

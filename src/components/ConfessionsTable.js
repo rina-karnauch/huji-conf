@@ -4,13 +4,13 @@ import Button from '@mui/material/Button';
 import {Grid} from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import {styled} from '@mui/material/styles';
-import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 import ConfessionTextField from "./ConfessionTable/ConfessionTextField"
 import NumberSwitch from "./ConfessionTable/NumberSwitch";
-import {useState, useRef} from "react";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
+import {useState, useRef} from "react";
+import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 
 
 const ConfessionsTable = (props) => {
@@ -19,9 +19,9 @@ const ConfessionsTable = (props) => {
     const [ID, setID] = useState('');
     const numberSwitchRef = useRef();
     const confessionTextRef = useRef();
+    const formRef = useRef();
 
     const onSaveConfessionText = (data) => {
-        console.log(data);
         setConfession(data);
     }
 
@@ -39,14 +39,13 @@ const ConfessionsTable = (props) => {
         return formData;
     }
 
-    const onSubmission = () => {
+    function onSubmission() {
 
         let confessionJSON = {
             text: confession,
             isComment: (ID !== ''),
             ID: ID
         }
-
         let formData = constructFormData(confessionJSON);
 
         // into google forms
@@ -71,7 +70,6 @@ const ConfessionsTable = (props) => {
         confessionTextRef.current.clear();
         setID('');
         setConfession('');
-
     }
 
 
@@ -107,7 +105,7 @@ const ConfessionsTable = (props) => {
         color: submitTextHover,
         boxShadow: "none",
         border: "1px solid " + submitBorder,
-        borderRadius:"20px",
+        borderRadius: "20px",
         backgroundColor: submitButtonBG,
         '&:hover': {
             backgroundColor: submitButtonHoverBG,
@@ -117,36 +115,43 @@ const ConfessionsTable = (props) => {
     }));
 
     return (
-        <div className="content-table">
-            <Grid container spacing={2}>
-                <ConfessionTableTitle
-                    theme={props.theme}
-                    title="Send a Confession"
-                    icon={<EmailTwoToneIcon/>}/>
-                <ConfessionTextField
-                    theme={props.theme}
-                    onSaveConfessionText={(data) => {
-                        onSaveConfessionText(data);
-                    }}
-                    ref={confessionTextRef}/>
-                <NumberSwitch
-                    theme={props.theme}
-                    onCommentToExistingConfession={onCommentToExistingConfession}
-                    ref={numberSwitchRef}/>
-                <Grid container
-                    direction="column"
-                    alignItems="flex-end"
-                    justify="flex-end">
-                    <ColorButton variant="contained"
-                                 onClick={onSubmission}
-                                 endIcon={<SendIcon/>}
-                    >
-                        submit
-                    </ColorButton>
-                </Grid>
+        <form ref={formRef}>
+            <div className="content-table">
+                <Grid container spacing={2}>
+                    <ConfessionTableTitle
+                        theme={props.theme}
+                        title="Send a Confession"
+                        icon={<EmailTwoToneIcon/>}/>
+                    <ConfessionTextField
+                        theme={props.theme}
+                        onSaveConfessionText={(data) => {
+                            onSaveConfessionText(data);
+                        }}
+                        ref={confessionTextRef}
+                    />
+                    <NumberSwitch
+                        theme={props.theme}
+                        onCommentToExistingConfession={onCommentToExistingConfession}
+                        ref={numberSwitchRef}/>
+                    <Grid container
+                          direction="column"
+                          alignItems="flex-end"
+                          justify="flex-end">
+                        <ColorButton variant="contained"
+                                     onClick={() => {
+                                         if (formRef.current.reportValidity()) {
+                                             onSubmission();
+                                         }
+                                     }
+                                     }
+                                     endIcon={<SendIcon/>}>
+                            submit
+                        </ColorButton>
+                    </Grid>
 
-            </Grid>
-        </div>
+                </Grid>
+            </div>
+        </form>
     );
 }
 

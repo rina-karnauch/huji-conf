@@ -1,6 +1,6 @@
 import ConfessionsTable from "./ConfessionsTable";
 import './Table.css';
-import {Route, Switch, Redirect} from "react-router-dom";
+import {Route, Redirect} from "react-router-dom";
 import EmergencyTable from "./EmergencyTable";
 import * as React from "react";
 

@@ -33,7 +33,12 @@ const Header = (props) => {
     return (
         <div className="header-line">
             <GiSecretBook className="lock-icon"/>
-            <div className="title-text">Some Confessions</div>
+            <div className="title-text">
+                <a href="https://new.huji.ac.il/"
+                   style={{color: "white", textDecorationColor:'light' ? lightTheme.headerBG : darkTheme.headerBG}}>
+                    Huji Confessions
+                </a>
+            </div>
             <div className="side-icons">
                 <GiNightSky className="night-mode" onClick={changeTheme}
                 />

@@ -69,6 +69,7 @@ const ConfessionTextField = forwardRef((props, ref) => {
     return (
         <Grid item xs={12}>
             <TextField className={classes.cssTextField}
+                       required
                        fullWidth multiline
                        id="fullWidth"
                        labelcolor={labelColor}
