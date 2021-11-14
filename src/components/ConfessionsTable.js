@@ -12,7 +12,6 @@ import {darkTheme} from "../themes/darkTheme";
 import {useState, useRef} from "react";
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 
-
 const ConfessionsTable = (props) => {
 
     const [confession, setConfession] = useState('');
@@ -55,15 +54,6 @@ const ConfessionsTable = (props) => {
                 method: 'post',
                 mode: 'no-cors'
             });
-        //
-        // // into firebase
-        // fetch('https://huji-confessions-default-rtdb.europe-west1.firebasedatabase.app/confessions.json', {
-        //     method: 'POST',
-        //     body: JSON.stringify(confessionJSON.confessions),
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // });
 
         // clearing data
         numberSwitchRef.current.clear();
@@ -148,7 +138,6 @@ const ConfessionsTable = (props) => {
                             submit
                         </ColorButton>
                     </Grid>
-
                 </Grid>
             </div>
         </form>

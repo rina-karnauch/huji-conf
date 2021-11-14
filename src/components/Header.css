@@ -5,6 +5,7 @@
     --header-border:#6c99a7;
     --lock-border: #73a8b8;
     --lock-background: #7ab2c2;
+    --mode-bg:transparent;
 }
 .header-line{
     line-height:55px;
@@ -64,10 +65,16 @@
     float:right;
 }
 
-.night-mode:hover, .facebook-link:hover{
-    background-color: #916ab4;
+.night-mode{
+    background-color: var(--mode-bg);
     border-radius:50%;
-    box-shadow: 0 0 0 3px #916ab4;
+    box-shadow: 0 0 0 3px var(--mode-bg);
+}
+
+.facebook-link{
+    background-color: #3d69ac;
+    border-radius:50%;
+    box-shadow: 0 0 0 3px transparent;
 }
 
 

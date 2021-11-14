@@ -21,4 +21,5 @@ export const darkTheme = {
     lockBG: "#58ad40",
     lockBorder:"#319a36",
     linkColor:"#58ad40",
+    modeBG:"#b084d9",
 }

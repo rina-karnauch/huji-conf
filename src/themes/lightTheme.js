@@ -1,5 +1,5 @@
 export const lightTheme = {
-    bg:"#f3f3f3",
+    bg:"#e7e7e7",
     sidebar:"#f5f5f5",
     sidebarBorder:"#ececec",
     sidebarHoverBG:"#eeeeee",
@@ -21,4 +21,5 @@ export const lightTheme = {
     lockBG: "#3aaecb",
     lockBorder:"#2e83a5",
     linkColor:"#3799c1",
+    modeBG:"transparent",
 }
