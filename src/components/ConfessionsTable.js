@@ -32,7 +32,7 @@ const ConfessionsTable = (props) => {
         let formData = new FormData();
         let text = confessionJSON.text;
         if (confessionJSON.isComment) {
-            text = "בתגובה ל" + confessionJSON.ID + ": " + text
+            text = "בתגובה ל" + confessionJSON.ID + "\n" + text
         }
         formData.append('entry.638196057', text);
         return formData;
