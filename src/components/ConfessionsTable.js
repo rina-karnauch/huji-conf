@@ -99,7 +99,7 @@ const ConfessionsTable = (props) => {
 
     const ColorButton = styled(Button)(({theme}) => ({
         color: submitTextHover,
-        marginTop:"5px",
+        marginTop: "5px",
         boxShadow: "none",
         border: "1px solid " + submitBorder,
         borderRadius: "20px",
@@ -138,9 +138,9 @@ const ConfessionsTable = (props) => {
                                      onClick={() => {
                                          if (formRef.current.reportValidity()) {
                                              onSubmission();
+                                             setOpen(o => !o);
                                          }
-                                         setOpen(o => !o);
-                                     }
+                                        }
                                      }
                                      endIcon={<SendIcon/>}>
                             submit
@@ -150,7 +150,7 @@ const ConfessionsTable = (props) => {
                                 <a className="close" onClick={closeModal}>
                                     &times;
                                 </a>
-                                <div className="header"> All done ✅ </div>
+                                <div className="header"> All done ✅</div>
                                 <div className="content">
                                     Your submission was made successfully!
                                 </div>
