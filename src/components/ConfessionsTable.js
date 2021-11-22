@@ -1,5 +1,6 @@
 import './ConfessionsTable.css';
 import * as React from 'react';
+import Popup from 'reactjs-popup';
 import Button from '@mui/material/Button';
 import {Grid} from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
@@ -11,6 +12,7 @@ import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
 import {useState, useRef} from "react";
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
+import 'reactjs-popup/dist/index.css';
 
 const ConfessionsTable = (props) => {
 
@@ -19,6 +21,10 @@ const ConfessionsTable = (props) => {
     const numberSwitchRef = useRef();
     const confessionTextRef = useRef();
     const formRef = useRef();
+
+    // pop up
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false);
 
     const onSaveConfessionText = (data) => {
         setConfession(data);
@@ -93,6 +99,7 @@ const ConfessionsTable = (props) => {
 
     const ColorButton = styled(Button)(({theme}) => ({
         color: submitTextHover,
+        marginTop:"5px",
         boxShadow: "none",
         border: "1px solid " + submitBorder,
         borderRadius: "20px",
@@ -132,11 +139,23 @@ const ConfessionsTable = (props) => {
                                          if (formRef.current.reportValidity()) {
                                              onSubmission();
                                          }
+                                         setOpen(o => !o);
                                      }
                                      }
                                      endIcon={<SendIcon/>}>
                             submit
                         </ColorButton>
+                        <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                            <div className="modal">
+                                <a className="close" onClick={closeModal}>
+                                    &times;
+                                </a>
+                                <div className="header"> All done ✅ </div>
+                                <div className="content">
+                                    Your submission was made successfully!
+                                </div>
+                            </div>
+                        </Popup>
                     </Grid>
                 </Grid>
             </div>
