@@ -1,6 +1,6 @@
 {
   "name": "huji-conf",
-  "homepage": "www.hujiconfessions.com",
+  "homepage": "https://hujiconfessions.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
