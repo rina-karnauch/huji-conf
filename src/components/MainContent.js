@@ -30,6 +30,7 @@ const MainContent = () => {
     }
 
     renderTheme();
+    // grecaptcha.execute();
 
     return (
         <div>

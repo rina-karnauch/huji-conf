@@ -13,6 +13,7 @@ import {darkTheme} from "../themes/darkTheme";
 import {useState, useRef} from "react";
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 import 'reactjs-popup/dist/index.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ConfessionsTable = (props) => {
 
@@ -111,8 +112,12 @@ const ConfessionsTable = (props) => {
         },
     }));
 
+    const recaptchaRef = React.createRef();
+
     return (
-        <form ref={formRef}>
+        <form ref={formRef}
+              onSubmit={() => { recaptchaRef.current.execute(); }}
+            >
             <div className="content-table">
                 <Grid container spacing={2}>
                     <ConfessionTableTitle
@@ -156,6 +161,12 @@ const ConfessionsTable = (props) => {
                                 </div>
                             </div>
                         </Popup>
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            size="invisible"
+                            sitekey="6LcUmFsdAAAAAMm6IZJ0v2JdFLKCTTOq0s1MND1U"
+                            onChange={()=>{}}
+                        />
                     </Grid>
                 </Grid>
             </div>
