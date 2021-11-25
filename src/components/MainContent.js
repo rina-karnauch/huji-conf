@@ -1,5 +1,4 @@
 import './MainContent.css';
-import '../themes/Themes.js';
 import * as React from "react";
 import Header from "./Header";
 import Upnav from "./Upnav";
@@ -8,7 +7,6 @@ import Footer from "./Footer";
 import {useState} from "react";
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
-import { TextField, Button } from "@material-ui/core";
 
 
 const MainContent = () => {

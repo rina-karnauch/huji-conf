@@ -70,7 +70,7 @@ const ConfessionsTable = (props) => {
     }
 
 
-    let submitButtonBG, submitButtonHoverBG, confessionTitle, submitTextHover, submitBorder;
+    let submitButtonBG, submitButtonHoverBG, submitTextHover, submitBorder;
 
     function renderTheme() {
         let root = document.documentElement;
@@ -81,7 +81,7 @@ const ConfessionsTable = (props) => {
             root.style.setProperty('--confession-table-title', lightTheme.confessionTitle);
             submitButtonBG = lightTheme.submitButtonBG;
             submitButtonHoverBG = lightTheme.submitButtonHoverBG;
-            confessionTitle = lightTheme.confessionTitle;
+            // confessionTitle = lightTheme.confessionTitle;
             submitTextHover = lightTheme.submitTextHover;
             submitBorder = lightTheme.submitBorder;
         } else {
@@ -90,7 +90,7 @@ const ConfessionsTable = (props) => {
             root.style.setProperty('--confession-table-title', darkTheme.confessionTitle);
             submitButtonBG = darkTheme.submitButtonBG;
             submitButtonHoverBG = darkTheme.submitButtonHoverBG;
-            confessionTitle = darkTheme.confessionTitle;
+            // confessionTitle = darkTheme.confessionTitle;
             submitTextHover = darkTheme.submitTextHover;
             submitBorder = darkTheme.submitBorder;
         }
@@ -116,8 +116,10 @@ const ConfessionsTable = (props) => {
 
     return (
         <form ref={formRef}
-              onSubmit={() => { recaptchaRef.current.execute(); }}
-            >
+              onSubmit={() => {
+                  recaptchaRef.current.execute();
+              }}
+        >
             <div className="content-table">
                 <Grid container spacing={2}>
                     <ConfessionTableTitle
@@ -145,14 +147,14 @@ const ConfessionsTable = (props) => {
                                              onSubmission();
                                              setOpen(o => !o);
                                          }
-                                        }
+                                     }
                                      }
                                      endIcon={<SendIcon/>}>
                             submit
                         </ColorButton>
                         <Popup open={open} closeOnDocumentClick onClose={closeModal}>
                             <div className="modal">
-                                <a className="close" onClick={closeModal}>
+                                <a href="/#" className="close" onClick={closeModal}>
                                     &times;
                                 </a>
                                 <div className="header"> All done ✅</div>
@@ -165,7 +167,8 @@ const ConfessionsTable = (props) => {
                             ref={recaptchaRef}
                             size="invisible"
                             sitekey="6LcUmFsdAAAAAMm6IZJ0v2JdFLKCTTOq0s1MND1U"
-                            onChange={()=>{}}
+                            onChange={() => {
+                            }}
                         />
                     </Grid>
                 </Grid>

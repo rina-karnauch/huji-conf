@@ -1,5 +1,5 @@
 import "./NumberSwitch.css"
-import React, {forwardRef, useState, useRef, useImperativeHandle} from 'react';
+import React, {forwardRef, useState, useImperativeHandle} from 'react';
 import Grid from "@mui/material/Grid";
 import {lightTheme} from "../../themes/lightTheme";
 import {darkTheme} from "../../themes/darkTheme";
