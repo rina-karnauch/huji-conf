@@ -41,7 +41,7 @@ const ConfessionsTable = (props) => {
         if (confessionJSON.isComment) {
             text = "בתגובה ל" + confessionJSON.ID + "\n" + text
         }
-        formData.append('entry.638196057', text);
+        formData.append('entry.544016128', text);
         return formData;
     }
 
@@ -55,7 +55,7 @@ const ConfessionsTable = (props) => {
         let formData = constructFormData(confessionJSON);
 
         // into google forms
-        fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_Fn2K-cqZophaEL4dW8ZRIcHbfok2dhsLjojCP1H5ekTulQ/formResponse",
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSfUCFOq0hFNXYxrPhRQSWDM-myPla6NMqpbrfdLX4S5TIs6lg/formResponse",
             {
                 body: formData,
                 method: 'post',
