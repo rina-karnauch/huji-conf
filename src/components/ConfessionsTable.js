@@ -154,7 +154,7 @@ const ConfessionsTable = (props) => {
                         </ColorButton>
                         <Popup open={open} closeOnDocumentClick onClose={closeModal}>
                             <div className="modal">
-                                <a href="/#" className="close" onClick={closeModal}>
+                                <a className="close" onClick={closeModal}>
                                     &times;
                                 </a>
                                 <div className="header"> All done ✅</div>
