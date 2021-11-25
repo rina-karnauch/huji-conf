@@ -55,7 +55,7 @@ const ConfessionsTable = (props) => {
         let formData = constructFormData(confessionJSON);
 
         // into google forms
-        fetch("https://docs.google.com/forms/d/e/1FAIpQLSfUCFOq0hFNXYxrPhRQSWDM-myPla6NMqpbrfdLX4S5TIs6lg/formResponse",
+        fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSfUCFOq0hFNXYxrPhRQSWDM-myPla6NMqpbrfdLX4S5TIs6lg/formResponse",
             {
                 body: formData,
                 method: 'post',
