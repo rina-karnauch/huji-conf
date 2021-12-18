@@ -2,7 +2,7 @@ import "./NumberSwitch.css"
 import Grid from "@mui/material/Grid";
 import {lightTheme} from "../../themes/lightTheme";
 import {darkTheme} from "../../themes/darkTheme";
-import React, {forwardRef, useState, useImperativeHandle} from 'react';
+import React, {forwardRef, useState, useRef, useImperativeHandle} from 'react';
 import {alpha, styled} from '@mui/material/styles';
 import Switch from "@mui/material/Switch";
 import TextField from "@mui/material/TextField";
@@ -71,18 +71,19 @@ const NumberSwitch = forwardRef((props, ref) => {
 
 
     const [disabled, setDisabled] = useState(true);
-    const [text, setText] = useState('');
+    let [numberBoxText, setNumberBoxText] = useState('');
 
     // handling disabling and abling number box
     function handleConfessionNumberBox(event) {
         setDisabled(!disabled);
+        event.currentTarget.value = "";
         onChangeOfTextBox(event);
     }
 
     // child function so parent could use it.
     useImperativeHandle(ref, () => ({
         clear: () => {
-            setText("");
+            setNumberBoxText("");
             if (disabled) {
                 setDisabled(true);
             } else {
@@ -91,14 +92,15 @@ const NumberSwitch = forwardRef((props, ref) => {
         }
     }));
 
-    // handling typing in text box
+
     function onChangeOfTextBox(event) {
         if (!disabled) {
-            setText(event.target.value);
+            setNumberBoxText(event.currentTarget.value);
         } else {
-            setText('');
+            setNumberBoxText("");
         }
-        props.onCommentToExistingConfession(event.target.value);
+        // current input
+        props.onCommentToExistingConfession(event.currentTarget.value);
     }
 
     // colors for theme and for text box
@@ -155,17 +157,21 @@ const NumberSwitch = forwardRef((props, ref) => {
         >
             <p className="switch-text">comment for an existing confession?</p>
             <CostumedSwitch {...label}
-                            onChange={(event) => handleConfessionNumberBox(event)}/>
+                            onChange={
+                                (event) => handleConfessionNumberBox(event)
+                            }/>
             <TextField
                 required
                 className={classes.cssTextField}
                 id="outlined-basic"
-                label="* number"
+                label="number"
                 variant="outlined"
                 disabled={disabled}
                 onKeyPress={(event) => validate(event)}
-                onChange={(event) => onChangeOfTextBox(event)}
-                value={text}
+                onChange={(event) => onChangeOfTextBox(event)
+                }
+                value={numberBoxText}
+                // 17:29 working
             />
         </Grid>
     );

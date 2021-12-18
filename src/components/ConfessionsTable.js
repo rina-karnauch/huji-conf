@@ -52,6 +52,7 @@ const ConfessionsTable = (props) => {
             isComment: (ID !== ''),
             ID: ID
         }
+
         let formData = constructFormData(confessionJSON);
 
         // into google forms

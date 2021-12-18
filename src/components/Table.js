@@ -15,7 +15,9 @@ const Table = (props) => {
             <Redirect from="/huji-conf/" to="/"/>
             <Route exact path="/"
                    render={() => (
-                       <ConfessionsTable theme={props.theme}/>
+                       <ConfessionsTable
+                           theme={props.theme}
+                           disabledSwitch={true}/>
                    )}
             />
             <Route exact path="/hotlines"
