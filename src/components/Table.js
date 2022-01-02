@@ -28,7 +28,7 @@ const Table = (props) => {
             <Route exact path="/m-tutorial"
                    component = {() => {
                        // bug
-                       window.location.href = 'https://www.facebook.com/ConfessionsHUJI/posts/1044714699711130';
+                       window.location.href = 'https://www.facebook.com/ConfessionsHUJI/posts/982578955924705';
                    }}
                    // render={() => (
                    //     //
