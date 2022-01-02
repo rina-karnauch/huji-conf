@@ -30,10 +30,6 @@ const Table = (props) => {
                        // bug
                        window.location.href = 'https://www.facebook.com/ConfessionsHUJI/posts/982578955924705';
                    }}
-                   // render={() => (
-                   //     //
-                   //     <MemeTutorial theme={props.theme}/>
-                   // )}
             />
         </div>
     );

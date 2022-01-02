@@ -71,7 +71,7 @@ const useStyles = makeStyles({
 // component
 const NumberSwitch = forwardRef((props, ref) => {
 
-    const [disabled, setDisabled] = useState(false);
+    const [disabled, setDisabled] = useState(true);
     let [numberBoxText, setNumberBoxText] = useState('');
 
 
@@ -87,9 +87,9 @@ const NumberSwitch = forwardRef((props, ref) => {
         clear: () => {
             setNumberBoxText("");
             if (!disabled) {
-                setDisabled(true);
-            } else {
                 setDisabled(false);
+            } else {
+                setDisabled(true);
             }
         }
     }));

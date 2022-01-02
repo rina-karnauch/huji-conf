@@ -27,13 +27,6 @@ const ConfessionsTable = (props) => {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
 
-    // toggle activation
-    const [active, setActive] = useState(false);
-
-    const activityHandler = (value) => {
-        setActive(value);
-    }
-
     const onSaveConfessionText = (data) => {
         setConfession(data);
     }
@@ -75,9 +68,6 @@ const ConfessionsTable = (props) => {
         confessionTextRef.current.clear();
         setID('');
         setConfession('');
-
-        // resetting toggle
-        setActive(false);
     }
 
 
@@ -146,7 +136,6 @@ const ConfessionsTable = (props) => {
                     />
                     <NumberSwitch
                         theme={props.theme}
-                        activityHandler={activityHandler}
                         onCommentToExistingConfession={onCommentToExistingConfession}
                         ref={numberSwitchRef}
                     />
