@@ -3,6 +3,7 @@ import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import {Navigation} from 'react-minimal-side-navigation';
 import {AiTwotoneFileText} from 'react-icons/ai';
 import {HiPhone} from 'react-icons/hi';
+import {MdInsertPhoto} from 'react-icons/md'
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
 import {useHistory} from "react-router-dom";
@@ -51,6 +52,13 @@ const Upnav = (props) => {
                         // you can use your own custom Icon component as well
                         // icon is optional
                         elemBefore: () => <HiPhone name="hotlines"/>,
+                    },
+                    {
+                        title: 'tutorial: how to send a meme',
+                        itemId: '/m-tutorial',
+                        // you can use your own custom Icon component as well
+                        // icon is optional
+                        elemBefore: () => <MdInsertPhoto name="m-tutorial"/>,
                     },
                 ]}
             />

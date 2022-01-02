@@ -9,7 +9,9 @@ import TextField from "@mui/material/TextField";
 import {makeStyles} from "@mui/styles";
 
 
-const label = {inputProps: {'aria-label': 'confession number switch'}};
+const label = {
+    inputProps: {'aria-label': 'confession number switch'},
+};
 
 
 // styling of switch
@@ -69,9 +71,9 @@ const useStyles = makeStyles({
 // component
 const NumberSwitch = forwardRef((props, ref) => {
 
-
-    const [disabled, setDisabled] = useState(true);
+    const [disabled, setDisabled] = useState(false);
     let [numberBoxText, setNumberBoxText] = useState('');
+
 
     // handling disabling and abling number box
     function handleConfessionNumberBox(event) {
@@ -84,7 +86,7 @@ const NumberSwitch = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({
         clear: () => {
             setNumberBoxText("");
-            if (disabled) {
+            if (!disabled) {
                 setDisabled(true);
             } else {
                 setDisabled(false);
@@ -159,7 +161,8 @@ const NumberSwitch = forwardRef((props, ref) => {
             <CostumedSwitch {...label}
                             onChange={
                                 (event) => handleConfessionNumberBox(event)
-                            }/>
+                            }
+            />
             <TextField
                 required
                 className={classes.cssTextField}
@@ -171,7 +174,6 @@ const NumberSwitch = forwardRef((props, ref) => {
                 onChange={(event) => onChangeOfTextBox(event)
                 }
                 value={numberBoxText}
-                // 17:29 working
             />
         </Grid>
     );
