@@ -25,7 +25,7 @@ const Table = (props) => {
                    render={() => (
                        <EmergencyTable theme={props.theme}/>
                    )}/>
-            <Route exact path="/"
+            <Route exact path="/m-tutorial"
                    component = {() => {
                        window.location.href = 'https://www.facebook.com/ConfessionsHUJI/posts/1044714699711130';
                    }}
