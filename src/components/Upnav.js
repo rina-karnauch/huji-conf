@@ -36,7 +36,12 @@ const Upnav = (props) => {
                 // you can use your own router's api to get pathname
                 activeItemId="/management/members"
                 onSelect={({itemId}) => {
-                    history.push(itemId);
+                    if (itemId === "outside-m") {
+                        window.open("https://www.facebook.com/ConfessionsHUJI/posts/982578955924705", '_blank');
+                    } else {
+                        history.push(itemId);
+                    }
+
                 }}
                 items={[
                     {
@@ -55,7 +60,7 @@ const Upnav = (props) => {
                     },
                     {
                         title: 'tutorial: how to send a meme',
-                        itemId: '/m-tutorial',
+                        itemId: 'outside-m',
                         // you can use your own custom Icon component as well
                         // icon is optional
                         elemBefore: () => <MdInsertPhoto name="m-tutorial"/>,

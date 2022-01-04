@@ -3,7 +3,6 @@ import './Table.css';
 import {Route, Redirect} from "react-router-dom";
 import EmergencyTable from "./EmergencyTable";
 import * as React from "react";
-import MemeTutorial from "./MemeTutorial";
 
 const Table = (props) => {
 
@@ -25,12 +24,12 @@ const Table = (props) => {
                    render={() => (
                        <EmergencyTable theme={props.theme}/>
                    )}/>
-            <Route exact path="/m-tutorial"
-                   component = {() => {
-                       // bug
-                       window.location.href = 'https://www.facebook.com/ConfessionsHUJI/posts/982578955924705';
-                   }}
-            />
+            {/*<Route exact path="/m-tutorial"*/}
+            {/*       component = {() => {*/}
+            {/*           // bug*/}
+            {/*           window.location.href = 'https://www.facebook.com/ConfessionsHUJI/posts/982578955924705';*/}
+            {/*       }}*/}
+            {/*/>*/}
         </div>
     );
 }
