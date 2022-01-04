@@ -80,6 +80,7 @@ const ConfessionTextField = forwardRef((props, ref) => {
                        variant="outlined"
                        value={confession}
                        name="entry.638196057"
+                       dir="rtl"
                        onChange={(event) => {
                            setConfession(event.target.value);
                            props.onSaveConfessionText(event.target.value);

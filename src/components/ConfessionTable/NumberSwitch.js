@@ -83,14 +83,16 @@ const NumberSwitch = forwardRef((props, ref) => {
     }
 
     // child function so parent could use it.
+    // clears the number switch
     useImperativeHandle(ref, () => ({
         clear: () => {
             setNumberBoxText("");
-            if (!disabled) {
-                setDisabled(false);
-            } else {
-                setDisabled(true);
-            }
+            // don't need, its done in handleConfessionNumberBox
+            // if (!disabled) {
+            //     setDisabled(false);
+            // } else {
+            //     setDisabled(true);
+            // }
         }
     }));
 
