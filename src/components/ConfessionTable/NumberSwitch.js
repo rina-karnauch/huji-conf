@@ -9,11 +9,6 @@ import TextField from "@mui/material/TextField";
 import {makeStyles} from "@mui/styles";
 
 
-const label = {
-    inputProps: {'aria-label': 'confession number switch'},
-};
-
-
 // styling of switch
 const CostumedSwitch = styled(Switch)(({theme}) => ({
     "& .MuiSwitch-switchBase.Mui-checked": {
@@ -93,9 +88,13 @@ const NumberSwitch = forwardRef((props, ref) => {
             // } else {
             //     setDisabled(true);
             // }
+        },
+        turnToggleOff: () => {
+            // turn toggle off when confession is sent
+            label.checked = false;
+            setDisabled(true);
         }
     }));
-
 
     function onChangeOfTextBox(event) {
         if (!disabled) {
@@ -152,6 +151,10 @@ const NumberSwitch = forwardRef((props, ref) => {
     // its not inside because of the "onChange" rendring each time
     const classes = useStyles({labelColor: labelColor, textBoxBorder: textBoxBorder});
 
+    const label = {
+        inputProps: {'aria-label': 'confession number switch'},
+        checked: !disabled,
+    };
 
     return (
         <Grid container
@@ -160,7 +163,8 @@ const NumberSwitch = forwardRef((props, ref) => {
               className="switch-box"
         >
             <p className="switch-text">comment for an existing confession?</p>
-            <CostumedSwitch {...label}
+            <CostumedSwitch {...label
+                            }
                             onChange={
                                 (event) => handleConfessionNumberBox(event)
                             }

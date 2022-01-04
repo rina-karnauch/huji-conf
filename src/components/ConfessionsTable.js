@@ -47,6 +47,8 @@ const ConfessionsTable = (props) => {
 
     function onSubmission() {
 
+        numberSwitchRef.current.turnToggleOff();
+
         let confessionJSON = {
             text: confession,
             isComment: (ID !== ''),
@@ -69,7 +71,6 @@ const ConfessionsTable = (props) => {
         setID('');
         setConfession('');
     }
-
 
     let submitButtonBG, submitButtonHoverBG, submitTextHover, submitBorder;
 
