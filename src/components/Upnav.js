@@ -45,7 +45,7 @@ const Upnav = (props) => {
                 }}
                 items={[
                     {
-                        title: 'write a confessions',
+                        title: 'write a confession',
                         itemId: '/',
                         // you can use your own custom Icon component as well
                         // icon is optional

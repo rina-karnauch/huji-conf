@@ -162,7 +162,7 @@ const NumberSwitch = forwardRef((props, ref) => {
               alignItems="center"
               className="switch-box"
         >
-            <p className="switch-text">comment for an existing confession?</p>
+            <p className="switch-text">is this a comment for an existing confession?</p>
             <CostumedSwitch {...label
                             }
                             onChange={
@@ -173,7 +173,7 @@ const NumberSwitch = forwardRef((props, ref) => {
                 required
                 className={classes.cssTextField}
                 id="outlined-basic"
-                label="number"
+                label="confession number"
                 variant="outlined"
                 disabled={disabled}
                 onKeyPress={(event) => validate(event)}
