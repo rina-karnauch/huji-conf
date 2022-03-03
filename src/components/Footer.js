@@ -33,7 +33,7 @@ const Footer = (props) => {
                     website can be <a href="https://new.huji.ac.il/">here</a>. <br></br>
                 </div>
                 <div className="admin-text">
-                    Confessions are moderated by anonymous admins. Site was created by Rina Karnauch.
+                    Confessions are moderated by anonymous admins. Site was created by Rina Karnauch 🧚🏻.
                 </div>
                 <div className="rights-text">
                     All Rights Reserved © 2021
