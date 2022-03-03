@@ -38,3 +38,8 @@
     color:var(--link-color);
     font-weight: 700;
 }
+
+.admin-text a {
+    color: #816897;
+    font-weight: 700;
+}
