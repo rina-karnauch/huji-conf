@@ -33,7 +33,7 @@
     justify-content: center;
     border: 2px solid black;
     box-sizing: border-box;
-    border-radius: 2px;
+    /*border-radius: 2px;*/
 }
 
 .april-button div:after{
@@ -46,7 +46,7 @@
     justify-content: center;
     border: 2px solid #32363d;
     box-sizing: border-box;
-    border-radius: 2px;
+    /*border-radius: 2px;*/
 }
 .april-button div:before{
     color: #e5e5e5;

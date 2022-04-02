@@ -31,6 +31,9 @@ const CostumedSwitch = styled(Switch)(({theme}) => ({
 // styling of text box
 const useStyles = makeStyles({
     cssTextField: props => ({
+        // '& fieldset': {
+        //     borderRadius: `0px`,
+        // },
         '& label': {
             color: props.labelColor,
         },

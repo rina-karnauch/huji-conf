@@ -7,10 +7,11 @@
 
 .content-table {
     background-color: var(--confession-table-bg);
-    padding: 10px;
+    padding: 25px;
     border: 1px solid var(--confession-table-border);
     border-radius: 10px;
     margin: 10px 10px 10px 10px;
+
 }
 
 .confession-box-title {
