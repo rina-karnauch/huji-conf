@@ -1,9 +1,9 @@
 import './Sidebar.css';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
-import {Navigation} from 'react-minimal-side-navigation';
 import {AiTwotoneFileText} from 'react-icons/ai';
 import {HiPhone} from 'react-icons/hi';
 import {useHistory} from "react-router-dom";
+import {Navigation} from 'react-minimal-side-navigation';
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
 

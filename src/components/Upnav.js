@@ -1,11 +1,11 @@
 import './Upnav.css';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import {Navigation} from 'react-minimal-side-navigation';
+import {lightTheme} from "../themes/lightTheme";
+import {darkTheme} from "../themes/darkTheme";
 import {AiTwotoneFileText} from 'react-icons/ai';
 import {HiPhone} from 'react-icons/hi';
 import {MdInsertPhoto} from 'react-icons/md';
-import {lightTheme} from "../themes/lightTheme";
-import {darkTheme} from "../themes/darkTheme";
 import {useHistory} from "react-router-dom";
 
 

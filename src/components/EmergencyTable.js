@@ -6,13 +6,13 @@ import CircleTwoToneIcon from '@mui/icons-material/CircleTwoTone';
 import FemaleRoundedIcon from '@mui/icons-material/FemaleRounded';
 import MaleRoundedIcon from '@mui/icons-material/MaleRounded';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
-import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle";
-import ListItemText from '@mui/material/ListItemText';
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle";
+import ListItemText from '@mui/material/ListItemText';
 
 const EmergencyTable = (props) => {
 

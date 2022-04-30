@@ -7,6 +7,7 @@
     --lock-background: #7ab2c2;
     --mode-bg:transparent;
 }
+
 .header-line{
     line-height:55px;
     height:55px;
@@ -77,6 +78,9 @@
     box-shadow: 0 0 0 3px transparent;
 }
 
+.login-icon:hover{
+    background-color: grey;
+}
 
 span.space{
     margin:5px;

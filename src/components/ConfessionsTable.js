@@ -10,10 +10,10 @@ import NumberSwitch from "./ConfessionTable/NumberSwitch";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import {lightTheme} from "../themes/lightTheme";
 import {darkTheme} from "../themes/darkTheme";
+import ReCAPTCHA from "react-google-recaptcha";
 import {useState, useRef} from "react";
 import ConfessionTableTitle from "./ConfessionTable/ConfessionTableTitle"
 import 'reactjs-popup/dist/index.css';
-import ReCAPTCHA from "react-google-recaptcha";
 
 const ConfessionsTable = (props) => {
 
@@ -45,7 +45,7 @@ const ConfessionsTable = (props) => {
         return formData;
     }
 
-    function onSubmission() {
+    async function onSubmission() {
 
         numberSwitchRef.current.turnToggleOff();
 
@@ -64,6 +64,18 @@ const ConfessionsTable = (props) => {
                 method: 'post',
                 mode: 'no-cors'
             });
+
+        // mongo
+        // await fetch("http://localhost:5000/record/add", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(confessionJSON),
+        // })
+        //     .catch(error => {
+        //         console.log(error);
+        //     });
 
         // clearing data
         numberSwitchRef.current.clear();

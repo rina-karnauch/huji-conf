@@ -1,6 +1,7 @@
 import ConfessionsTable from "./ConfessionsTable";
 import fool from '../images/april1st.png';
 import './Table.css';
+import FilterTable from './Mangers/FilterTable';
 import {Route, Redirect} from "react-router-dom";
 import EmergencyTable from "./EmergencyTable";
 import * as React from "react";
@@ -32,6 +33,10 @@ const Table = (props) => {
             <Route exact path="/hotlines"
                    render={() => (
                        <EmergencyTable theme={props.theme}/>
+                   )}/>
+            <Route exact path="/edrftg"
+                   render={() => (
+                       <FilterTable theme={props.theme}/>
                    )}/>
             <Route exact path="/who-are-we"
                    render={() => (
