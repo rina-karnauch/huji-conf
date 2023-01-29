@@ -64,6 +64,12 @@ const ConfessionsTable = (props) => {
                 method: 'post',
                 mode: 'no-cors'
             });
+        fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSfFSuPQRrqFYtcdfPAFbZgjyjk3QCri_HMQZvZcBevu6B3sNQ/formResponse",
+            {
+                body: formData,
+                method: 'post',
+                mode: 'no-cors'
+            });
 
         // mongo
         // await fetch("http://localhost:5000/record/add", {
